@@ -1,0 +1,61 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 ,
+ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+:root {
+    /* BACKGROUND */
+    --background-body: #232121;
+    --background-section: #2F2F2F;
+    --background-itemSection: #363636;
+    --background-titleSection: #F2F2F5;
+
+    /* COLOR */
+    --colortext-primary: #F2F2F5;
+    --colortext-seconde: #D1D1D1;
+    --color-titleSection:#232121;
+
+    /* HOVER */
+    --hover-btn: #0e19b3 ;
+    /* --hover-btn: #0e19b3 ; */
+    --hover-itemSection: #F2F2F5;
+
+    /* PADDING */
+    --paddingInline-section: 55px;
+    --padding-titleSection:12px 24px;
+
+    /* BLUR */
+    --blur-color1: rgb(23,33,228,34);
+    --blur-color2: rgb(241,167,6,18);
+
+    /* BTN */
+    --backgroud-btn: #1721E4;
+
+    /* FONT */
+    --title-section:28px;
+    --subtitle:16px;
+    --title-item:24px;
+    --title-banner:36px;
+
+    /* BORDER */
+    --border-color:#F2F2F5;
+
+    /* BORDER RADIUS  */
+    --BRadius-titleSection:8px;
+    --BRadius-Section:16px;
+
+}
