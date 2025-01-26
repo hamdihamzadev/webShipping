@@ -33,6 +33,8 @@ ul
     --hover-btn: #0e19b3 ;
     /* --hover-btn: #0e19b3 ; */
     --hover-itemSection: #F2F2F5;
+    --hover-titleItemSection:#232121;
+    --hover-paraItemSection:#232121;
 
     /* PADDING */
     --paddingInline-section: 55px;
