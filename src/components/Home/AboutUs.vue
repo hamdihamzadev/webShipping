@@ -2,18 +2,17 @@
     <section id="aboutUs">
         <b-container class="mb-5">
             <b-row>
-                <b-col cols="12" lg="6"  >
+                <b-col cols="12" lg="6">
                     <b-row class="g-0">
-                        <b-col cols="6" md="4">
+                        <b-col cols="6" md="4" id="item-col1">
                             <div id="container-title" class="position-relative">
                                 <TitleSection :title-part1="'About'" :title-part2="'Us'" />
                                 <div id="radius-btm-right" class="position-absolute"></div>
                             </div>
                         </b-col>
-                        <b-col cols="6" md="8">
-                            <div id="item2"></div>
+                        <b-col cols="6" md="8" id="item-col2">
                         </b-col>
-                        <b-col cols="12">
+                        <b-col cols="12" id="item-col3">
                             <div id="item3">
                                 <p class="m-0">
                                     Welcome to our platform! We are dedicated to providing a simple and efficient
@@ -36,19 +35,17 @@
                         </b-col>
                     </b-row>
                 </b-col>
-                <b-col cols="12" lg="6"  >
-                    <div id="container-img"
-                        class="d-flex align-items-center justify-content-end position-relative">
-                        <div class="position-absolute z-1" id="img-topology">
-                            <img :src="require('@/assets/img/Topology-1.png')" alt="">
-                        </div>
-                        <div class="position-absolute z-1" id="blur">
-                            <BlurBg />
-                        </div>
-                        <b-img 
-                        style="max-width: 400px; height: 400px; object-fit: contain;" 
-                        :src="require('@/assets/img/aboutUs.webp')"  alt="Responsive image"></b-img>
+
+                <b-col cols="12" lg="6" id="col-img"
+                    class="overflow-hidden position-relative d-flex align-items-center justify-content-end">
+                    <img id="img-topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-1.png')"
+                        alt="">
+                    <div class="position-absolute z-1" id="blur">
+                        <BlurBg />
                     </div>
+                    <b-img 
+                        :src="require('@/assets/img/aboutUs.webp')" fluid-grow alt="Responsive image">
+                    </b-img>
                 </b-col>
             </b-row>
 
@@ -90,6 +87,30 @@
 <style lang="scss" scoped>
     #aboutUs {
 
+        #item-col1,
+        #item-col2,
+        #item-col3,
+        #col-img {
+            background-color: var(--background-section);
+        }
+
+        #item-col2 {
+            border-top-right-radius: var(--BRadius-Section);
+            border-top-left-radius: var(--BRadius-Section);
+        }
+
+        #item-col3 {
+            border-bottom-right-radius: var(--BRadius-Section);
+            border-bottom-left-radius: var(--BRadius-Section);
+            border-top-left-radius: var(--BRadius-Section);
+            padding: var(--paddingInline-section);
+        }
+
+        #col-img {
+            border-radius: var(--BRadius-Section);
+            padding: var(--paddingInline-section);
+        }
+
         #container-title {
             background-color: var(--background-body);
             height: 100px;
@@ -113,47 +134,19 @@
             }
         }
 
-        #item2 {
-            background-color: var(--background-section);
-            height: 100px;
-            border-top-right-radius: var(--BRadius-Section);
-            border-top-left-radius: var(--BRadius-Section);
+
+        #img-topology {
+            top: 73px;
+            width: 182px;
+            left: 100px;
+            opacity: 0.6;
         }
 
-        #item3 {
-            background-color: var(--background-section);
-            height: 400px;
-            border-top-left-radius: var(--BRadius-Section);
-            border-radius: var(--BRadius-Section) 0 var(--BRadius-Section) var(--BRadius-Section);
-            padding: var(--paddingInline-section);
-
-            p {
-                text-align: justify;
-            }
-        }
-
-
-        #container-img {
-            background-color: var(--background-section);
-            height: 500px;
-            border-radius: var(--BRadius-Section);
-            padding: var(--paddingInline-section);
-            overflow: hidden;
-
-            #img-topology {
-                top: 73px;
-                width: 182px;
-                left: 100px;
-                opacity: 0.6;
-            }
-
-            #blur {
-                left: 57px;
-                top: 0;
-                opacity: 0.8;
-                rotate: 108deg;
-            }
-
+        #blur {
+            left: 57px;
+            top: 0;
+            opacity: 0.8;
+            rotate: 108deg;
         }
 
     }
