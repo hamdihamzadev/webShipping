@@ -1,6 +1,5 @@
 <template>
     <section id="hautHeader" >
-        <b-container >
             <div class="d-flex justify-content-between align-items-center py-4"  >
                 <div class="d-flex justify-content-between align-items-center gap-5"  >
                     <div class="d-flex align-items-center gap-2" > 
@@ -19,7 +18,6 @@
                     <small class="m-0" >Login</small>
                 </div>
             </div>
-        </b-container>
     </section>
 </template>
 
@@ -28,9 +26,3 @@ export default{
     name:'TopBar'
 }
 </script>
-
-<style  lang="scss" scoped>
-#hautHeader{
-    padding-inline: var(--paddingInline-section);
-}
-</style>

@@ -1,13 +1,12 @@
 <template>
     <section  id="home" >
-        <b-container class="px-5" >
             <b-row class="g-5" >
                 <b-col cols="12" ><MainBanner/></b-col>
                 <b-col cols="12" ><AboutUs/></b-col>
                 <b-col cols="12" ><OurServices/></b-col>
                 <b-col cols="12" ><HowitWork/></b-col>
             </b-row>
-        </b-container>
+       
 
     </section>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <section id="header">
-        <b-container>
+    
             <div class="d-flex justify-content-between align-items-center" id="content">
                 <h5 class="m-0"><strong>SHIPiN</strong></h5>
                 <ul class="d-flex justify-content-between align-items-center gap-3 m-0" id="list">
@@ -15,7 +15,7 @@
                 </router-link>
          
             </div>
-        </b-container>
+        
     </section>
 </template>
 
@@ -44,7 +44,7 @@
 
 <style lang="scss" scoped>
     #header {
-        padding-inline: var(--paddingInline-section);
+
 
         #content {
             border: 1px solid var(--border-color);
