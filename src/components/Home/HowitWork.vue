@@ -1,6 +1,6 @@
 <template>
     <section id="howItWork">
-        <b-container>
+   
             <b-row class="g-0">
                 <b-col md="3" id="col-title">
                     <TitleSection :title-part1="'How'" :title-part2="'It Work'" :type-title="'left'" />
@@ -56,9 +56,10 @@
 
                             </div>
                         </b-col>
+                        
                         <b-col>
                             <div id="item-step" class="position-relative p-5 overflow-hidden">
-                                <div class="position-absolute z-1 " id="blur">
+                                <div class="position-absolute z-1" id="blur">
                                     <BlurBg />
                                 </div>
                                 <div
@@ -69,11 +70,13 @@
                                     </div>
                                 </div>
                                 <p id="title-step" class="position-relative z-3">Enter your id Order</p>
-                                <div class="text-end position-relative-3">
+                                <div class="text-end position-relative z-3">
                                     <b-img id="img" :src="require('@/assets/img/aboutUs.webp')"></b-img>
                                 </div>
+
                             </div>
                         </b-col>
+
                         <b-col>
                             <div id="item-step" class="position-relative p-5 overflow-hidden">
                                 <div class="position-absolute z-1" id="blur">
@@ -87,15 +90,18 @@
                                     </div>
                                 </div>
                                 <p id="title-step" class="position-relative z-3">Enter your id Order</p>
-                                <div class="text-en position-relative-3d">
+                                <div class="text-end position-relative z-3">
                                     <b-img id="img" :src="require('@/assets/img/aboutUs.webp')"></b-img>
                                 </div>
+
                             </div>
                         </b-col>
+
+
                     </b-row>
                 </b-col>
             </b-row>
-        </b-container>
+    
     </section>
 </template>
 

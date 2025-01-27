@@ -1,17 +1,14 @@
 <template>
     <section  id="home" >
-        <div class="mt-5" >
-            <MainBanner/>
-        </div>
-        <div class="mt-5" >
-            <AboutUs/>
-        </div>
-        <div class="mt-5" >
-            <OurServices/>
-        </div>
-        <div class="mt-5" >
-            <HowitWork/>
-        </div>
+        <b-container class="px-5" >
+            <b-row class="g-5" >
+                <b-col cols="12" ><MainBanner/></b-col>
+                <b-col cols="12" ><AboutUs/></b-col>
+                <b-col cols="12" ><OurServices/></b-col>
+                <b-col cols="12" ><HowitWork/></b-col>
+            </b-row>
+        </b-container>
+
     </section>
 </template>
 

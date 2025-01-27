@@ -1,6 +1,5 @@
 <template>
     <section id="aboutUs">
-        <b-container class="mb-5">
             <b-row>
                 <b-col cols="12" lg="6" >
                     <b-row class="g-0 h-100" >
@@ -52,9 +51,6 @@
                         </b-img>
                 </b-col>
             </b-row>
-
-        </b-container>
-
     </section>
 
 </template>

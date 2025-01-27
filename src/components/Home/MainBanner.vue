@@ -1,6 +1,5 @@
 <template>
     <section id="slide">
-        <b-container>
             <div id="content" class="d-flex justify-content-between align-items-center position-relative">
                 <div class="d-flex flex-column">
 
@@ -29,7 +28,6 @@
                 </div>
 
             </div>
-        </b-container>
     </section>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <section id="our-services">
-        <b-container>
+
             <b-row class="g-0 overflow-hidden">
                 <b-col md="9" id="col-subtitle">
                     <div class="h-100 d-flex align-items-center justify-content-end gap-3">
@@ -114,7 +114,7 @@
                     </b-row>
                 </b-col>
             </b-row>
-        </b-container>
+
     </section>
 </template>
 

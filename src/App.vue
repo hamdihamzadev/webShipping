@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TopBar />
-    <MainHeader />
+    <div class="mb-5" ><MainHeader /></div>
     <router-view />
   </div>
 </template>
