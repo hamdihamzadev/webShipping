@@ -27,7 +27,7 @@
                 <div>
                     <img :src="require('@/assets/img/imgBanner.png')" alt="">
                 </div>
-               
+
             </div>
         </b-container>
     </section>
@@ -35,12 +35,12 @@
 
 <script>
     import BlurBg from '@/components/global/BlurBg.vue'
-    
+
     export default {
         name: 'MainBanner',
         components: {
             BlurBg,
-            
+
         }
 
     }
@@ -48,6 +48,7 @@
 
 <style lang="scss" scoped>
     #slide {
+
 
         #content {
             background-color: var(--background-section);

@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <TopBar/>
-    <MainHeader/>
+    <TopBar />
+    <MainHeader />
     <router-view />
   </div>
 </template>
 
 <script>
-import MainHeader from './components/global/MainHeader.vue';
-import TopBar from './components/global/TopBar.vue';
+  import MainHeader from './components/global/MainHeader.vue';
+  import TopBar from './components/global/TopBar.vue';
 
   export default {
     name: 'App',
-    components:{
+    components: {
       MainHeader,
       TopBar,
     }
@@ -27,5 +27,7 @@ import TopBar from './components/global/TopBar.vue';
     font-family: "Montserrat", serif;
     color: var(--colortext-primary);
     overflow-x: hidden;
+
+
   }
 </style>

@@ -9,13 +9,19 @@
         <div class="mt-5" >
             <OurServices/>
         </div>
+        <div class="mt-5" >
+            <HowitWork/>
+        </div>
     </section>
 </template>
 
 <script>
 import AboutUs from '@/components/Home/AboutUs.vue';
+import HowitWork from '@/components/Home/HowitWork.vue';
 import MainBanner from '@/components/Home/MainBanner.vue';
 import OurServices from '@/components/Home/OurServices.vue';
+
+
 
 
 
@@ -24,7 +30,8 @@ export default{
     components:{
         MainBanner,
         AboutUs,
-        OurServices
+        OurServices,
+        HowitWork
     }
 
 }
