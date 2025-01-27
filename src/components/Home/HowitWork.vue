@@ -32,8 +32,11 @@
                         </p>
                     </div>
                 </b-col>
-                <b-col md="12" id="col-steps">
-                    <b-row>
+                <b-col md="12" id="col-steps" class="position-relative" >
+                    <div id="topology" class="position-absolute z-1" >
+                        <b-img :src="require('@/assets/img/Topology-2.png')" ></b-img>
+                    </div>
+                    <b-row class="position-relative z-3" >
                         <b-col>
                             <div id="item-step" class="position-relative p-5 overflow-hidden">
                                 <div class="position-absolute z-1" id="blur">
@@ -60,7 +63,7 @@
                                 </div>
                                 <div
                                     class="position-relative z-3  d-flex align-items-center justify-content-between mb-4">
-                                    <p id="number-step" class="m-0">01</p>
+                                    <p id="number-step" class="m-0">02</p>
                                     <div>
                                         <StartBurst />
                                     </div>
@@ -78,7 +81,7 @@
                                 </div>
                                 <div
                                     class="position-relative z-3  d-flex align-items-center justify-content-between mb-4">
-                                    <p id="number-step" class="m-0">01</p>
+                                    <p id="number-step" class="m-0">03</p>
                                     <div>
                                         <StartBurst />
                                     </div>
@@ -192,6 +195,12 @@
             background-color: var(--background-section);
             border-radius: var(--BRadius-Section) 0 var(--BRadius-Section) var(--BRadius-Section);
             padding: var(--paddingInline-section);
+
+            #topology{
+                bottom: 0;
+                left: 0;
+                opacity: 0.7;
+            }
 
             #item-step {
                 background-color: var(--background-itemSection);

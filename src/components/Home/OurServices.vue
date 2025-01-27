@@ -213,6 +213,12 @@
             border-bottom-left-radius: var(--BRadius-Section);
             border-top-right-radius: var(--BRadius-Section);
 
+            #topology{
+                bottom: 0;
+                right: 0;
+                opacity: 0.5;
+            }
+
             #blurBg {
                 left: 97px;
                 top: 107px;
