@@ -6,6 +6,7 @@
       <div class="mb-5">
         <MainHeader />
       </div>
+      
       <router-view />
     </b-container>
   </div>

@@ -72,6 +72,8 @@
 
     #aboutUs {
 
+        animation: blr 10s linear infinite;
+
         #col-cercle,
         #col-paragraphe{
             background-color: var(--background-section);
@@ -144,4 +146,16 @@
         }
 
     }
+@keyframes blr {
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+    
 </style>

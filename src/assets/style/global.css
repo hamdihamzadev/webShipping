@@ -60,4 +60,9 @@ ul
     --BRadius-titleSection:8px;
     --BRadius-Section:16px;
 
+    /* INPUT */
+    --bg-Input:#363636;
+    --border-color:#E4E4E4;
+    --color-placholder:#999999;
+
 }
