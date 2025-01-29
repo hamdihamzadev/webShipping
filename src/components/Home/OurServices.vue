@@ -39,75 +39,16 @@
                         <BlurBg />
                     </div>
                     <b-row class="g-4 z-3 position-relative">
-                        <b-col cols="6" lg="4">
+                        <b-col cols="6" lg="4" v-for="(item,index) in services" :key="item.id" >
                             <div class="service p-5">
-                                <div class="container-icon" id="back-icon1">
-                                    <b-icon icon="person"></b-icon>
+                                <div class="container-icon" :id="`back-icon${index+1}`">
+                                    <b-icon :icon="item.icon"></b-icon>
                                 </div>
                                 <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col cols="6" lg="4">
-                            <div class="service p-5">
-                                <div class="container-icon" id="back-icon2">
-                                    <b-icon icon="person"></b-icon>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col cols="6" lg="4">
-                            <div class="service p-5">
-                                <div class="container-icon" id="back-icon3">
-                                    <b-icon icon="person"></b-icon>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col cols="6" lg="4">
-                            <div class="service p-5">
-                                <div class="container-icon" id="back-icon4">
-                                    <b-icon icon="person"></b-icon>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col cols="6" lg="4">
-                            <div class="service p-5">
-                                <div class="container-icon" id="back-icon5">
-                                    <b-icon icon="person"></b-icon>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col cols="6" lg="4">
-                            <div class="service p-5">
-                                <div class="container-icon" id="back-icon6">
-                                    <b-icon icon="person"></b-icon>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2" id="title">Real-time tracking</h4>
-                                    <p class="mb-0" id="paragraphe">for tracking your orders. Our mission is to offer
-                                        modern and reliable toolsy .</p>
+                                    <h4 class="mb-2" id="title">{{item.title}}</h4>
+                                    <p class="mb-0" id="paragraphe">
+                                        {{item.para}}
+                                    </p>
                                 </div>
                             </div>
                         </b-col>
@@ -128,6 +69,17 @@
             TitleSection,
             BlurBg,
         },
+
+        data(){return{
+            services:[
+                {title:'Real-Time Tracking',para:'Customers can track their order live, receiving automatic updates on its status from dispatch to delivery.',icon:'geo-alt'},
+                {title:'Notifications and Alerts',para:'Receive email or SMS notifications about order status changes, ensuring customers are always informed.',icon:'bell'},
+                {title:'Order History',para:'Access past orders with all details, including tracking information and invoices, for easy reference.',icon:'clock'},
+                {title:'Return Reques',para:'If youre not satisfied, provide your order number and reason, and our support team will assist with a hassle-free return.',icon:'arrow-repeat'},
+                {title:'Customer Support',para:'Get quick support through live chat or our FAQ section for any order-related issues.',icon:'headset'},
+                {title:'Estimated Delivery Time',para:'Customers get an estimated delivery time based on their address and courier, helping them plan ahead.',icon:'calendar-check'},
+            ]
+        }}
 
     }
 </script>

@@ -1,107 +1,67 @@
 <template>
     <section id="howItWork">
-   
-            <b-row class="g-0">
-                <b-col md="3" id="col-title">
-                    <TitleSection :title-part1="'How'" :title-part2="'It Work'" :type-title="'left'" />
-                </b-col>
-                <b-col md="9" id="col-subtitle">
-                    <div class="h-100 d-flex align-items-center justify-content-end gap-3">
-                        <div id="container-cercle" class="position-relative">
-                            <div class="position-absolute top-50 start-50 translate-middle">
-                                <div id="burst-puckerSubtitle"></div>
-                            </div>
-                            <svg id="rotatingText" viewBox="0 0 200 200" width="60" height="60">
-                                <defs>
-                                    <path id="circle" d="M 100, 100
+
+        <b-row class="g-0">
+            <b-col md="3" id="col-title">
+                <TitleSection :title-part1="'How'" :title-part2="'It Work'" :type-title="'left'" />
+            </b-col>
+            <b-col md="9" id="col-subtitle">
+                <div class="h-100 d-flex align-items-center justify-content-end gap-3">
+                    <div id="container-cercle" class="position-relative">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <div id="burst-puckerSubtitle"></div>
+                        </div>
+                        <svg id="rotatingText" viewBox="0 0 200 200" width="60" height="60">
+                            <defs>
+                                <path id="circle" d="M 100, 100
                                          m -75, 0
                                          a 75, 75 0 1, 0 150, 0
                                          a 75, 75 0 1, 0 -150, 0 ">
-                                    </path>
-                                </defs>
-                                <text width="400">
-                                    <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-                                        FAST TRACKING - FAST TRACKING - FAST TRACKING -
-                                    </textPath>
-                                </text>
-                            </svg>
+                                </path>
+                            </defs>
+                            <text width="400">
+                                <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+                                    FAST TRACKING - FAST TRACKING - FAST TRACKING -
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <p id="para" class="m-0">
+                        Service for tracking your orders Our mission is to offer modern and reliable tools that make
+                        tracking your packages transparent and accessible, wherever
+                    </p>
+                </div>
+            </b-col>
+            <b-col md="12" id="col-steps" class="position-relative">
+                <div id="topology" class="position-absolute z-1">
+                    <b-img :src="require('@/assets/img/Topology-2.png')"></b-img>
+                </div>
+                <b-row class="position-relative z-3">
+
+                    <b-col v-for="(item,index) in steps" :key="item.id" id="col-step">
+                        <div id="item-step" class="h-100 position-relative p-5 overflow-hidden">
+                            <div class="position-absolute z-1" id="blur">
+                                <BlurBg />
+                            </div>
+                            <div class="position-relative z-3  d-flex align-items-center justify-content-between mb-2">
+                                <p id="number-step" class="m-0">0{{ index+1 }}</p>
+                                <div>
+                                    <StartBurst />
+                                </div>
+                            </div>
+                            <p id="title-step" class="position-relative z-3">{{ item.name }}</p>
+                            <div id="container-img" class="text-end position-absolute z-3">
+                                <b-img id="img" :src="item.img"></b-img>
+                            </div>
+
                         </div>
-                        <p id="para" class="m-0">
-                            Service for tracking your orders Our mission is to offer modern and reliable tools that make
-                            tracking your packages transparent and accessible, wherever
-                        </p>
-                    </div>
-                </b-col>
-                <b-col md="12" id="col-steps" class="position-relative" >
-                    <div id="topology" class="position-absolute z-1" >
-                        <b-img :src="require('@/assets/img/Topology-2.png')" ></b-img>
-                    </div>
-                    <b-row class="position-relative z-3" >
-                        <b-col>
-                            <div id="item-step" class="position-relative p-5 overflow-hidden">
-                                <div class="position-absolute z-1" id="blur">
-                                    <BlurBg />
-                                </div>
-                                <div
-                                    class="position-relative z-3  d-flex align-items-center justify-content-between mb-4">
-                                    <p id="number-step" class="m-0">01</p>
-                                    <div>
-                                        <StartBurst />
-                                    </div>
-                                </div>
-                                <p id="title-step" class="position-relative z-3">Enter your id Order</p>
-                                <div class="text-end position-relative z-3">
-                                    <b-img id="img" :src="require('@/assets/img/aboutUs.webp')"></b-img>
-                                </div>
-
-                            </div>
-                        </b-col>
-                        
-                        <b-col>
-                            <div id="item-step" class="position-relative p-5 overflow-hidden">
-                                <div class="position-absolute z-1" id="blur">
-                                    <BlurBg />
-                                </div>
-                                <div
-                                    class="position-relative z-3  d-flex align-items-center justify-content-between mb-4">
-                                    <p id="number-step" class="m-0">02</p>
-                                    <div>
-                                        <StartBurst />
-                                    </div>
-                                </div>
-                                <p id="title-step" class="position-relative z-3">Enter your id Order</p>
-                                <div class="text-end position-relative z-3">
-                                    <b-img id="img" :src="require('@/assets/img/aboutUs.webp')"></b-img>
-                                </div>
-
-                            </div>
-                        </b-col>
-
-                        <b-col>
-                            <div id="item-step" class="position-relative p-5 overflow-hidden">
-                                <div class="position-absolute z-1" id="blur">
-                                    <BlurBg />
-                                </div>
-                                <div
-                                    class="position-relative z-3  d-flex align-items-center justify-content-between mb-4">
-                                    <p id="number-step" class="m-0">03</p>
-                                    <div>
-                                        <StartBurst />
-                                    </div>
-                                </div>
-                                <p id="title-step" class="position-relative z-3">Enter your id Order</p>
-                                <div class="text-end position-relative z-3">
-                                    <b-img id="img" :src="require('@/assets/img/aboutUs.webp')"></b-img>
-                                </div>
-
-                            </div>
-                        </b-col>
+                    </b-col>
 
 
-                    </b-row>
-                </b-col>
-            </b-row>
-    
+                </b-row>
+            </b-col>
+        </b-row>
+
     </section>
 </template>
 
@@ -109,6 +69,7 @@
     import BlurBg from '../global/BlurBg.vue';
     import StartBurst from '../global/StartBurst.vue';
     import TitleSection from '../TitleSection.vue';
+    import animation from "../Home/animation.json"
 
 
     export default {
@@ -117,6 +78,26 @@
             TitleSection,
             BlurBg,
             StartBurst
+        },
+
+        data() {
+            return {
+                steps: [{
+                        name: 'Enter Order ID',
+                        img: require('@/assets/img/stepnoire1.webp')
+                    },
+                    {
+                        name: 'Track Status',
+                        img: require('@/assets/img/noire.webp')
+                    },
+                    {
+                        name: 'Payment & Delivery Completed',
+                        img: require('@/assets/img/step3noir.webp')
+                    },
+                ],
+
+                anim: animation
+            }
         }
     }
 </script>
@@ -192,7 +173,7 @@
 
             #para {
                 font-size: 14px;
-              
+
                 text-align: justify;
             }
         }
@@ -202,7 +183,11 @@
             border-radius: var(--BRadius-Section) 0 var(--BRadius-Section) var(--BRadius-Section);
             padding: var(--paddingInline-section);
 
-            #topology{
+            #col-step {
+                height: 450px;
+            }
+
+            #topology {
                 bottom: 0;
                 left: 0;
                 opacity: 0.7;
@@ -255,13 +240,24 @@
                 &:hover #blur {
                     opacity: 1;
                 }
+
+                #container-img {
+                    bottom: 48px;
+                    right: 48px;
+                    bottom: 48px;
+                    height: auto;
+                    width: 90px;
+
+                    #img {
+                        width: inherit;
+                        height: inherit;
+                        object-fit: cover;
+
+                    }
+                }
             }
         }
 
-        #img {
-            width: 150px;
-            height: 150px;
 
-        }
     }
 </style>
