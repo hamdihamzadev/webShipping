@@ -2,11 +2,11 @@
     <section id="howItWork">
 
         <b-row class="g-0">
-            <b-col md="3" id="col-title">
-                <TitleSection :title-part1="'How'" :title-part2="'It Work'" :type-title="'left'" />
+            <b-col cols="6" md="3" id="col-title">
+                <TitleSection :section="'howitworks'" />
             </b-col>
-            <b-col md="9" id="col-subtitle">
-                <div class="h-100 d-flex align-items-center justify-content-end gap-3">
+            <b-col cols="6" md="9" id="col-subtitle">
+                <div class="h-100 d-flex align-items-center justify-content-end justify-content-lg-start gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="position-absolute top-50 start-50 translate-middle">
                             <div id="burst-puckerSubtitle"></div>
@@ -26,7 +26,7 @@
                             </text>
                         </svg>
                     </div>
-                    <p id="para" class="m-0">
+                    <p id="para" class="m-0 d-none d-md-block">
                         Service for tracking your orders Our mission is to offer modern and reliable tools that make
                         tracking your packages transparent and accessible, wherever
                     </p>
@@ -36,10 +36,10 @@
                 <div id="topology" class="position-absolute z-1">
                     <b-img :src="require('@/assets/img/Topology-2.png')"></b-img>
                 </div>
-                <b-row class="position-relative z-3">
+                <b-row class="position-relative z-3 gap-3 gap-md-0">
 
                     <b-col v-for="(item,index) in steps" :key="item.id" id="col-step">
-                        <div id="item-step" class="h-100 position-relative p-5 overflow-hidden">
+                        <div  id="item-step" class="h-100 position-relative p-5 overflow-hidden">
                             <div class="position-absolute z-1" id="blur">
                                 <BlurBg />
                             </div>
@@ -51,13 +51,10 @@
                             </div>
                             <p id="title-step" class="position-relative z-3">{{ item.name }}</p>
                             <div id="container-img" class="text-end position-absolute z-3">
-                                <b-img id="img" :src="item.img"></b-img>
+                                <b-img  id="img" :src="item.img"></b-img>
                             </div>
-
                         </div>
                     </b-col>
-
-
                 </b-row>
             </b-col>
         </b-row>
@@ -69,7 +66,7 @@
     import BlurBg from '../global/BlurBg.vue';
     import StartBurst from '../global/StartBurst.vue';
     import TitleSection from '../TitleSection.vue';
-    import animation from "../Home/animation.json"
+   
 
 
     export default {
@@ -84,21 +81,22 @@
             return {
                 steps: [{
                         name: 'Enter Order ID',
-                        img: require('@/assets/img/stepnoire1.webp')
+                        img:require('@/assets/img/stepnoire1.webp')
                     },
                     {
                         name: 'Track Status',
-                        img: require('@/assets/img/noire.webp')
+                        img:require('@/assets/img/step2black.webp')
                     },
                     {
                         name: 'Payment & Delivery Completed',
-                        img: require('@/assets/img/step3noir.webp')
+                        img:require('@/assets/img/step3black.webp')
                     },
                 ],
 
-                anim: animation
+
             }
-        }
+        },
+
     }
 </script>
 
@@ -257,7 +255,16 @@
                 }
             }
         }
+    }
 
+    // phone
+@media (max-width: 767.98px) {
+    #howItWork{
+
+        #col-steps{
+            padding: var(--paddingInline-section-mobile);
+        }
 
     }
+}
 </style>

@@ -38,6 +38,7 @@ ul
 
     /* PADDING */
     --paddingInline-section: 55px;
+    --paddingInline-section-mobile: 24px;
     --padding-titleSection:12px 24px;
 
     /* BLUR */
@@ -49,9 +50,12 @@ ul
 
     /* FONT */
     --title-section:28px;
+    --title-section-mobile:20px;
     --subtitle:16px;
+    --subtitle-mobile:14px;
     --title-item:24px;
     --title-banner:36px;
+    --title-banner-mobile:24px;
 
     /* BORDER */
     --border-color:#F2F2F5;

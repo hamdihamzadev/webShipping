@@ -1,60 +1,77 @@
 <template>
-    <section id="slide">
-            <div id="content" class="d-flex justify-content-between align-items-center position-relative">
-                <div class="d-flex flex-column">
-
-                    <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')"
-                        alt="">
-
+    <section id="banner" class="position-relative">
+        <b-row class="flex-column-reverse flex-lg-row gap-5 gap-lg-0" >
+            <b-col cols="12" lg="6" class="d-flex justify-content-center" >
+                <div class="d-flex flex-column justify-content-lg-center h-lg-100">
+                    <!-- <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')" alt=""> -->
+<!-- 
                     <div class="position-absolute z-1">
                         <BlurBg />
-                    </div>
+                    </div> -->
+
                     <h2 id="headline" class="fw-bold z-3">
                         <span>Simplify tracking your</span>
                         <br> <span>orders in on click</span>
                     </h2>
 
                     <p class="mb-5" id="subtitle">
-                        Our platform allows you to track your packages <br>
+                        Our platform allows you to track your packages
                         in real time, wherever you are
                     </p>
                     <router-link to="/trackorder" class="z-3">
                         <b-button id="cta" class="border-none">Track order</b-button>
                     </router-link>
                 </div>
-
+            </b-col>
+            <b-col cols="12" lg="6">
                 <div>
-                    <img :src="require('@/assets/img/imgBanner.png')" alt="">
+                    <img class="w-100 h-100 object-fit-contain" :src="require('@/assets/img/imgBanner.png')" alt="">
                 </div>
+            </b-col>
+        </b-row>
 
+
+
+        <!-- scroll infini -->
+        <!-- <div class="scroll-container mt-4">
+            <div class="scroll-content d-flex  align-items-center gap-5 p-3 ">
+                <div v-for="item in scrollInfini" :key="item.id" class="d-flex align-items-center gap-2 w-100">
+                    <b-img :src="require('@/assets/img/delivered.png')"></b-img>
+                    <p class="mb-0 w-100">{{ item }}</p>
+                </div>
             </div>
+        </div> -->
     </section>
 </template>
 
 <script>
-    import BlurBg from '@/components/global/BlurBg.vue'
+    // import BlurBg from '@/components/global/BlurBg.vue'
 
     export default {
         name: 'MainBanner',
-        components: {
-            BlurBg,
-
+        // components: {
+        //     BlurBg,
+        // },
+        data() {
+            return {
+                scrollInfini: ['Order in preparation', 'In delivery', 'Delivery successful', 'Waiting for confirmation',
+                    'Order in preparation', 'In delivery', 'Delivery successful', 'Waiting for confirmation',
+                    'Order in preparation', 'In delivery', 'Delivery successful', 'Waiting for confirmation',
+                    'Order in preparation', 'In delivery', 'Delivery successful', 'Waiting for confirmation'
+                ]
+            }
         }
 
     }
 </script>
 
 <style lang="scss" scoped>
-    #slide {
+    #banner {
 
-
-        #content {
-            background-color: var(--background-section);
-            padding-inline: var(--paddingInline-section);
-            border-radius: 16px;
-            height: 550px;
-            overflow: hidden;
-        }
+        background-color: var(--background-section);
+        padding:107px var(--paddingInline-section);
+        border-radius: 16px;
+        overflow: hidden;
 
         #headline {
             width: max-content;
@@ -103,5 +120,93 @@
             width: 300px;
             opacity: 0.8;
         }
+
+
+
+        .scroll-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .scroll-container::before {
+            content: "";
+            background: linear-gradient(to right, rgb(35 33 33), rgb(35 33 33 / 16%));
+            bottom: 0;
+            top: 0;
+            position: absolute;
+            width: 96px;
+            left: 0px;
+            z-index: 3;
+        }
+
+
+
+        .scroll-container::after {
+            content: "";
+            background: linear-gradient(to right, rgb(35 33 33 / 16%), rgb(35 33 33));
+            bottom: 0;
+            top: 0;
+            position: absolute;
+            width: 130px;
+            right: 0px;
+            z-index: 3;
+        }
+
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite;
+        }
+
     }
+
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-80%);
+        }
+    }
+
+    // phone
+    @media (max-width: 767.98px) {
+        #banner {
+            padding: 48px var(--paddingInline-section-mobile) ;
+
+            #headline {
+                font-size: var(--title-banner-mobile);
+            }
+
+            #subtitle {
+                color: var(--colortext-seconde);
+                font-size: var(--subtitle-mobile);
+            }
+
+            #topology {
+                left: 266px;
+                width: 200px;
+                opacity: 0.8;
+                bottom: 0;
+            }
+
+            #cta{
+                font-size: 14px;
+            }
+
+        }
+    }
+
+
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+        #banner{
+            padding: 48px var(--paddingInline-section-mobile) ;
+        }
+    }
+
 </style>

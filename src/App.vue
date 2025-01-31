@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <span class="loader"></span>
-    <b-container class="px-5">
-      <TopBar />
-      <div class="mb-5">
+    <b-container  class="px-lg-5">
+      <div class="d-none d-md-block" ><TopBar /></div>
+      <div class="mb-lg-5 mb-3">
         <MainHeader />
       </div>
       
@@ -28,6 +28,7 @@
 
 <style lang="scss">
   #app {
+    scroll-behavior: smooth;
     background-color: var(--background-body);
     height: 100vh;
     font-family: "Montserrat", serif;

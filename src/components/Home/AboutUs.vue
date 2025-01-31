@@ -1,15 +1,15 @@
 <template>
     <section id="aboutUs">
-            <b-row>
+            <b-row class="g-0 gap-3" >
                 <b-col cols="12" lg="6" >
                     <b-row class="g-0 h-100" >
                         <b-col cols="6" md="4" id="col-title" class="position-relative" >
                             <div class="h-100" >
-                                <TitleSection :typeTitle="'left'" :title-part1="'About'" :title-part2="'Us'" />
+                                <TitleSection :section="'about'"  />
                             </div>
                             <div id="radius-btm-right" class="position-absolute"></div>
                         </b-col>
-                        <b-col cols="8" id="col-cercle" ></b-col>
+                        <b-col cols="6" md="4" id="col-cercle" ></b-col>
                         <b-col cols="12" id="col-paragraphe" >
                             <p class="m-0">
                                 service for
@@ -71,8 +71,6 @@
 <style lang="scss" scoped>
 
     #aboutUs {
-
-        animation: blr 10s linear infinite;
 
         #col-cercle,
         #col-paragraphe{
@@ -146,15 +144,23 @@
         }
 
     }
-@keyframes blr {
-    0%{
-        transform: translateY(20px);
-    }
-    50%{
-        transform: translateY(10px);
-    }
-    100%{
-        transform: translateY(0px);
+
+
+// phone
+@media (max-width: 767.98px) {
+    #aboutUs{
+
+        #col-paragraphe{
+            padding: var(--paddingInline-section-mobile);
+            p{
+                font-size:var(--subtitle-mobile)
+            }
+
+        }
+
+        #col-img{
+            padding: var(--paddingInline-section-mobile);
+        }
     }
 }
     

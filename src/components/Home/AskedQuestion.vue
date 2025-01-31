@@ -1,18 +1,18 @@
 <template>
-    <section id="AskedQuestions" class="" >
+    <section id="faq" class="" >
         <b-row class="g-0" >
-            <b-col>
+            <b-col  cols="2" lg="4" >
                 <div class="h-100" id="col-left">
                 </div>
             </b-col>
-            <b-col>
+            <b-col  cols="8" lg="4" >
                 <div class="h-100" id="col-title">
                     <div id="container-title" >
-                        <TitleSection :type-title="'left'" :title-part1="'Frequencly'" :title-part2="'Asked Questions'" />
+                        <TitleSection :section="'FAQ'"  />
                     </div>
                 </div>
             </b-col>
-            <b-col>
+            <b-col  cols="2" lg="4" >
                 <div class="h-100" id="col-right"></div>
             </b-col>
             <b-col cols="12">
@@ -20,7 +20,7 @@
                     <div id="bg-blur" class="position-absolute z-1" >
                         <BlurBg/>
                      </div>
-                    <b-row class="g-3" >
+                    <b-row class="g-3 z-3" >
                         <b-col cols="12" v-for="(item,index) in questions" :key="item.id">
                             <div 
                                 @click="showResponse(index)" 
@@ -72,7 +72,7 @@ import TitleSection from '../TitleSection.vue';
 </script>
 
 <style lang=scss scoped>
-    #AskedQuestions {
+    #faq {
 
         #col-left,
         #col-right,
@@ -117,6 +117,30 @@ import TitleSection from '../TitleSection.vue';
                 border:1px solid var(--border-color);
             }
         }
+    }
+
+
+        // phone
+@media (max-width: 767.98px) {
+    #faq{
+
+        #col-questions{
+            padding: var(--paddingInline-section-mobile);
+
+            #bg-blur{
+                top: 186px;
+            }
+
+            #item-question{
+                border-radius: var(--BRadius-Section);
+                padding: 12px 24px;
+
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
 
     }
+}
 </style>

@@ -1,13 +1,13 @@
 <template>
     <section id="AppFooter" class="mb-4">
-        <b-row>
-            <b-col lg="3">
+        <b-row class="g-3 g-lg-0" >
+            <b-col  lg="3">
                 <div class="h-100 d-flex flex-column ">
                     <p class="mb-3 fw-medium">title</p>
                     <router-link to=""></router-link>
                 </div>
             </b-col>
-            <b-col lg="3" v-for="item in sectionLinks" :key="item.id">
+            <b-col cols="6" lg="3" v-for="item in sectionLinks" :key="item.id">
                 <div class="h-100" id="links">
                     <p id="title" class="mb-3 fw-medium">{{ item.topTitle }}</p>
                     <b-list-group>
@@ -153,4 +153,12 @@
 
         }
     }
+
+
+            // phone
+@media (max-width: 767.98px) {
+    #AppFooter{
+        padding: var(--paddingInline-section-mobile);
+    }
+}
 </style>

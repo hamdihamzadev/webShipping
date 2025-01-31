@@ -1,7 +1,7 @@
 <template>
     <section id="contact-us">
         <b-row class="g-0 overflow-hidden">
-            <b-col md="10">
+            <b-col cols="6" md="10">
                 <div id="subtitle" class="h-100 d-flex align-items-center justify-content-end gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="starburst position-absolute top-50 start-50 translate-middle">
@@ -21,20 +21,22 @@
                             </text>
                         </svg>
                     </div>
-                    <p id="para" class="m-0">
+                    <p id="para" class="m-0 d-none d-lg-block ">
                         Service for tracking your orders Our mission is to offer modern and reliable tools that
                         make
                         tracking your packages transparent and accessible, wherever
                     </p>
                 </div>
             </b-col>
-            <b-col md="2">
+            <b-col cols="6" md="2">
                 <div id="title">
-                    <TitleSection :title-part1="'contact'" :title-part2="'Us'" :type-title="'right'" />
+                    <TitleSection :section="'contact'" />
                 </div>
             </b-col>
-            <b-col md="12" class="position-relative" >
-                <div class="position-absolute" id="bgBlur"><BlurBg/></div>
+            <b-col md="12" class="position-relative">
+                <div class="position-absolute" id="bgBlur">
+                    <BlurBg />
+                </div>
                 <div id="form-contact">
                     <b-row class="align-items-center g-5">
                         <b-col md="7" id="form">
@@ -44,37 +46,37 @@
                                 <p class="m-0">As a creative agency we work with you to develop solutions to address
                                     your
                                     brand
-                                    needs. <br> That includes various aspects </p>
+                                    needs.</p>
                             </div>
                             <b-form @submit="onSubmit" @reset="onReset">
 
                                 <b-row class="g-4">
                                     <b-col md="6">
-                                        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-                                            <b-form-input id="input" placeholder="Enter name" required>
+                                        <b-form-group id="input-group-2" label="Name:" label-for="input-2">
+                                            <b-form-input id="input" placeholder="Enter Name" required>
                                             </b-form-input>
                                         </b-form-group>
                                     </b-col>
                                     <b-col md="6">
-                                        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-                                            <b-form-input id="input" placeholder="Enter name" required>
+                                        <b-form-group id="input-group-2" label="Phone:" label-for="input-2">
+                                            <b-form-input id="input" placeholder="Enter Phone" required>
                                             </b-form-input>
                                         </b-form-group>
                                     </b-col>
                                     <b-col md="12">
-                                        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-                                            <b-form-input id="input" placeholder="Enter name" required>
+                                        <b-form-group id="input-group-2" label="Email:" label-for="input-2">
+                                            <b-form-input id="input" placeholder="Enter Email" required>
                                             </b-form-input>
                                         </b-form-group>
                                     </b-col>
                                     <b-col md="12">
-                                        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-                                            <b-form-textarea id="input" placeholder="Enter something..." rows="3"
+                                        <b-form-group id="input-group-2" label="Message:" label-for="input-2">
+                                            <b-form-textarea id="input" placeholder="Enter your Message..." rows="3"
                                                 max-rows="6"></b-form-textarea>
                                         </b-form-group>
                                     </b-col>
                                     <b-col md="12">
-                                        <b-button class="w-100" id="btn-form" type="submit">Submit</b-button>
+                                        <b-button class="w-100" id="btn-form" type="submit">Send</b-button>
                                     </b-col>
                                 </b-row>
 
@@ -82,10 +84,11 @@
 
                         </b-col>
                         <b-col md="5" id="contact">
-                                <p id="title" class="mb-3 fw-bold">Contact with:</p>
-                            
+                            <p id="title" class="mb-3 fw-bold">Contact with:</p>
+
                             <div class="d-flex flex-column gap-3 ">
-                                <div id="item-contact" v-for="item in contact" :key="item.id" class="d-flex align-items-center gap-2">
+                                <div id="item-contact" v-for="item in contact" :key="item.id"
+                                    class="d-flex align-items-center gap-2">
                                     <div class="d-flex align-items-center justify-content-center" id="container-icon">
                                         <b-icon :icon="item.icon"></b-icon>
                                     </div>
@@ -105,7 +108,7 @@
 
 <script>
     import BlurBg from '../global/BlurBg.vue';
-import TitleSection from '../TitleSection.vue';
+    import TitleSection from '../TitleSection.vue';
 
     export default {
         name: 'ContactUs',
@@ -203,10 +206,11 @@ import TitleSection from '../TitleSection.vue';
 
             #form {
                 #headline {
-                    p:first-child{
+                    p:first-child {
                         z-index: 2;
                         font-size: 16px;
                     }
+
                     p:first-child::before {
                         content: "";
                         background-color: #1721e4;
@@ -264,12 +268,13 @@ import TitleSection from '../TitleSection.vue';
 
             #contact {
 
-                #title{
+                #title {
                     font-size: 16px;
                     z-index: 2;
                     position: relative;
                     padding: 0;
-                    &::before{
+
+                    &::before {
                         content: "";
                         background-color: #1721e4;
                         width: 21px;
@@ -280,11 +285,12 @@ import TitleSection from '../TitleSection.vue';
                         left: -6px;
                     }
                 }
+
                 p {
                     font-size: 14px;
                 }
 
-                #item-contact{
+                #item-contact {
                     padding-block: 20px;
                     border-bottom: 0.1px solid #ffffff14;
                 }
@@ -299,9 +305,20 @@ import TitleSection from '../TitleSection.vue';
             }
         }
 
-        #bgBlur{
+        #bgBlur {
             left: 52px;
             opacity: 0.7;
+        }
+    }
+
+    // phone
+    @media (max-width: 767.98px) {
+        #contact-us {
+
+            #form-contact{
+                padding: var(--paddingInline-section-mobile);
+            }
+
         }
     }
 </style>

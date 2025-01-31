@@ -2,8 +2,8 @@
     <section id="our-services">
 
             <b-row class="g-0 overflow-hidden">
-                <b-col md="9" id="col-subtitle">
-                    <div class="h-100 d-flex align-items-center justify-content-end gap-3">
+                <b-col cols="6" md="9" id="col-subtitle">
+                    <div class="h-100 d-flex align-items-center justify-content-lg-end justify-content-lg-start  gap-3">
                         <div id="container-cercle" class="position-relative">
                             <div class="starburst position-absolute top-50 start-50 translate-middle">
                             </div>
@@ -22,7 +22,7 @@
                                 </text>
                             </svg>
                         </div>
-                        <p id="para" class="m-0">
+                        <p id="para" class="m-0 d-none d-md-block">
                             Service for tracking your orders Our mission is to offer modern and reliable tools that
                             make
                             tracking your packages transparent and accessible, wherever
@@ -30,16 +30,16 @@
                     </div>
 
                 </b-col>
-                <b-col md="3" id="col-title" class="position-relative">
+                <b-col cols="6" md="3" id="col-title" class="position-relative">
                     <div id="radius-btm-left" class="position-absolute"></div>
-                    <TitleSection :type-title="'right'" :title-part1="'Our'" :title-part2="'Services'" />
+                    <TitleSection :section="'services'" />
                 </b-col>
                 <b-col md="12" class="col-services position-relative">
                     <div class="position-absolute z-1" id="blurBg">
                         <BlurBg />
                     </div>
                     <b-row class="g-4 z-3 position-relative">
-                        <b-col cols="6" lg="4" v-for="(item,index) in services" :key="item.id" >
+                        <b-col cols="12" lg="4" v-for="(item,index) in services" :key="item.id" >
                             <div class="service p-5">
                                 <div class="container-icon" :id="`back-icon${index+1}`">
                                     <b-icon :icon="item.icon"></b-icon>
@@ -198,7 +198,7 @@
                 }
 
                 #back-icon1 {
-                    background-color: #413D33;
+                    background-color: #f1a70629;
                     color: #F1A706
                 }
 
@@ -208,8 +208,8 @@
                 }
 
                 #back-icon3 {
-                    background-color: #363E37;
-                    color: #33B842
+                    background-color: rgba(54, 209, 54, 0.171);
+                    color: #36D136
                 }
 
                 #back-icon4 {
@@ -223,8 +223,8 @@
                 }
 
                 #back-icon6 {
-                    background-color: rgb(242, 242, 24, 0.11);
-                    color: #F2F2F5
+                    background-color: rgb(154 154 154 / 17%);
+    color: #939393;
                 }
 
                 .container-icon {
@@ -254,4 +254,16 @@
         }
 
     }
+
+
+// phone
+@media (max-width: 767.98px) {
+    #our-services{
+        #col-subtitle,
+        .col-services {
+            background-color: var(--background-section);
+            padding: var(--paddingInline-section-mobile);
+        }
+    }
+}
 </style>
