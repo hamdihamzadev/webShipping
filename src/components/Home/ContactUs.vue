@@ -1,7 +1,7 @@
 <template>
     <section id="contact-us">
         <b-row class="g-0 overflow-hidden">
-            <b-col cols="6" md="10">
+            <b-col cols="6" md="8" lg="10">
                 <div id="subtitle" class="h-100 d-flex align-items-center justify-content-end gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="starburst position-absolute top-50 start-50 translate-middle">
@@ -21,14 +21,12 @@
                             </text>
                         </svg>
                     </div>
-                    <p id="para" class="m-0 d-none d-lg-block ">
-                        Service for tracking your orders Our mission is to offer modern and reliable tools that
-                        make
-                        tracking your packages transparent and accessible, wherever
+                    <p id="para" class="m-0 d-none d-md-block ">
+                        Service for tracking your orders Our mission is to offer modern and reliable tools that make tracking 
                     </p>
                 </div>
             </b-col>
-            <b-col cols="6" md="2">
+            <b-col cols="6" md="4" lg="2">
                 <div id="title">
                     <TitleSection :section="'contact'" />
                 </div>
@@ -39,7 +37,7 @@
                 </div>
                 <div id="form-contact">
                     <b-row class="align-items-center g-5">
-                        <b-col md="7" id="form">
+                        <b-col cols="12" lg="7" id="form">
 
                             <div id="headline" class="mb-4 d-flex flex-column justify-content-center gap-2 ">
                                 <p class="m-0 fw-bold position-relative">Send Message</p>
@@ -83,7 +81,7 @@
                             </b-form>
 
                         </b-col>
-                        <b-col md="5" id="contact">
+                        <b-col cols="12" lg="5" id="contact">
                             <p id="title" class="mb-3 fw-bold">Contact with:</p>
 
                             <div class="d-flex flex-column gap-3 ">

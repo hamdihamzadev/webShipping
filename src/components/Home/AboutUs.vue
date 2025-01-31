@@ -1,6 +1,6 @@
 <template>
     <section id="aboutUs">
-            <b-row class="g-0 gap-3" >
+            <b-row class="g-0 gap-3 gap-lg-0" >
                 <b-col cols="12" lg="6" >
                     <b-row class="g-0 h-100" >
                         <b-col cols="6" md="4" id="col-title" class="position-relative" >
@@ -9,7 +9,7 @@
                             </div>
                             <div id="radius-btm-right" class="position-absolute"></div>
                         </b-col>
-                        <b-col cols="6" md="4" id="col-cercle" ></b-col>
+                        <b-col cols="6" md="8" id="col-cercle" ></b-col>
                         <b-col cols="12" id="col-paragraphe" >
                             <p class="m-0">
                                 service for

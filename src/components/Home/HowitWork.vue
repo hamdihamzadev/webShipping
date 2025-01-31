@@ -2,10 +2,10 @@
     <section id="howItWork">
 
         <b-row class="g-0">
-            <b-col cols="6" md="3" id="col-title">
+            <b-col cols="6" md="4" id="col-title">
                 <TitleSection :section="'howitworks'" />
             </b-col>
-            <b-col cols="6" md="9" id="col-subtitle">
+            <b-col cols="6" md="8" id="col-subtitle">
                 <div class="h-100 d-flex align-items-center justify-content-end justify-content-lg-start gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="position-absolute top-50 start-50 translate-middle">
@@ -36,9 +36,9 @@
                 <div id="topology" class="position-absolute z-1">
                     <b-img :src="require('@/assets/img/Topology-2.png')"></b-img>
                 </div>
-                <b-row class="position-relative z-3 gap-3 gap-md-0">
+                <b-row class="position-relative z-3 gap-3 gap-lg-0">
 
-                    <b-col v-for="(item,index) in steps" :key="item.id" id="col-step">
+                    <b-col cols="12" lg="4" v-for="(item,index) in steps" :key="item.id" id="col-step">
                         <div  id="item-step" class="h-100 position-relative p-5 overflow-hidden">
                             <div class="position-absolute z-1" id="blur">
                                 <BlurBg />

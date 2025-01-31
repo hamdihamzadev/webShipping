@@ -1,13 +1,14 @@
 <template>
     <section id="banner" class="position-relative">
-        <b-row class="flex-column-reverse flex-lg-row gap-5 gap-lg-0" >
-            <b-col cols="12" lg="6" class="d-flex justify-content-center" >
+        <b-row class="flex-column-reverse flex-lg-row gap-5 gap-lg-0">
+            <b-col cols="12" lg="6" class="d-flex justify-content-center">
                 <div class="d-flex flex-column justify-content-lg-center h-lg-100">
-                    <!-- <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')" alt=""> -->
-<!-- 
+                    <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')"
+                        alt="">
+
                     <div class="position-absolute z-1">
                         <BlurBg />
-                    </div> -->
+                    </div>
 
                     <h2 id="headline" class="fw-bold z-3">
                         <span>Simplify tracking your</span>
@@ -45,13 +46,13 @@
 </template>
 
 <script>
-    // import BlurBg from '@/components/global/BlurBg.vue'
+    import BlurBg from '@/components/global/BlurBg.vue'
 
     export default {
         name: 'MainBanner',
-        // components: {
-        //     BlurBg,
-        // },
+        components: {
+            BlurBg,
+        },
         data() {
             return {
                 scrollInfini: ['Order in preparation', 'In delivery', 'Delivery successful', 'Waiting for confirmation',
@@ -69,7 +70,7 @@
     #banner {
 
         background-color: var(--background-section);
-        padding:107px var(--paddingInline-section);
+        padding: 107px var(--paddingInline-section);
         border-radius: 16px;
         overflow: hidden;
 
@@ -176,7 +177,7 @@
     // phone
     @media (max-width: 767.98px) {
         #banner {
-            padding: 48px var(--paddingInline-section-mobile) ;
+            padding: 48px var(--paddingInline-section-mobile);
 
             #headline {
                 font-size: var(--title-banner-mobile);
@@ -188,13 +189,14 @@
             }
 
             #topology {
-                left: 266px;
-                width: 200px;
+                left: 272px;
+                width: 148px;
                 opacity: 0.8;
-                bottom: 0;
+                bottom: -27px;
+                top: auto;
             }
 
-            #cta{
+            #cta {
                 font-size: 14px;
             }
 
@@ -204,9 +206,18 @@
 
     // Medium devices (tablets, less than 992px)
     @media (max-width: 991.98px) {
-        #banner{
-            padding: 48px var(--paddingInline-section-mobile) ;
+        #banner {
+            padding:var(--paddingInline-section);
+
+            #topology {
+                left: auto;
+        width: 148px;
+        opacity: 0.8;
+        bottom: -27px;
+        top: auto;
+        right: -13px;
+            }
+
         }
     }
-
 </style>
