@@ -1,56 +1,45 @@
 <template>
     <section id="aboutUs">
-            <b-row class="g-0 gap-3 gap-lg-0" >
-                <b-col cols="12" lg="6" >
-                    <b-row class="g-0 h-100" >
-                        <b-col cols="6" md="4" id="col-title" class="position-relative" >
-                            <div class="h-100" >
-                                <TitleSection :section="'about'"  />
-                            </div>
-                            <div id="radius-btm-right" class="position-absolute"></div>
-                        </b-col>
-                        <b-col cols="6" md="8" id="col-cercle" ></b-col>
-                        <b-col cols="12" id="col-paragraphe" >
-                            <p class="m-0">
-                                service for
-                                tracking your orders. Our mission is to offer modern and reliable tools that make
-                                tracking
-                                your packages transparent and accessible, wherever you are. With a passionate team
-                                and
-                                innovative technology .
-                                Welcome to our platform! We are dedicated to providing a simple and efficient
-                                service for
-                                tracking your orders. Our mission is to offer modern and reliable tools that make
-                                tracking
-                                your packages transparent and accessible, wherever you are. With a passionate team
-                                and
-                                innovative technology .
-                            </p>
-                        </b-col>
-                    </b-row>
-                </b-col>
-                <b-col 
-                    cols="12" 
-                    lg="6" 
-                    id="col-img" 
-                    class="overflow-hidden position-relative d-flex align-items-center justify-content-end"  >
-                    <img 
-                        id="img-topology" 
-                        class="position-absolute z-1" 
-                        :src="require('@/assets/img/Topology-1.png')" 
-                        alt="">
-                    <div 
-                        class="position-absolute z-1" 
-                        id="blur">
-                        <BlurBg />
-                    </div>
-                        <b-img 
-                            id="img-gift"
-                            :src="require('@/assets/img/aboutUs.webp')"  
-                            alt="Responsive image">
-                        </b-img>
-                </b-col>
-            </b-row>
+        <b-row class="g-0 gap-3 flex-lg-nowrap">
+            <b-col cols="12" lg="6">
+                <b-row class="g-0 h-100">
+                    <b-col cols="6" md="4" id="col-title" class="position-relative">
+                        <div class="h-100">
+                            <TitleSection :section="'about'" />
+                        </div>
+                        <div id="radius-btm-right" class="position-absolute"></div>
+                    </b-col>
+                    <b-col cols="6" md="8" id="col-cercle"></b-col>
+                    <b-col cols="12" id="col-paragraphe">
+                        <p class="m-0">
+                            service for
+                            tracking your orders. Our mission is to offer modern and reliable tools that make
+                            tracking
+                            your packages transparent and accessible, wherever you are. With a passionate team
+                            and
+                            innovative technology .
+                            Welcome to our platform! We are dedicated to providing a simple and efficient
+                            service for
+                            tracking your orders. Our mission is to offer modern and reliable tools that make
+                            tracking
+                            your packages transparent and accessible, wherever you are. With a passionate team
+                            and
+                            innovative technology .
+                        </p>
+                    </b-col>
+                </b-row>
+            </b-col>
+            <b-col cols="12" lg="6" id="col-img"
+                class="overflow-hidden position-relative d-flex align-items-center justify-content-end flex-fill">
+                <img id="img-topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-1.png')"
+                    alt="">
+                <div class="position-absolute z-1" id="blur">
+                    <BlurBg />
+                </div>
+                <b-img id="img-gift" :src="require('@/assets/img/aboutUs.webp')" alt="Responsive image">
+                </b-img>
+            </b-col>
+        </b-row>
     </section>
 
 </template>
@@ -69,30 +58,48 @@
 </script>
 
 <style lang="scss" scoped>
-
     #aboutUs {
+        .row {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
 
         #col-cercle,
-        #col-paragraphe{
+        #col-paragraphe {
             background-color: var(--background-section);
         }
 
-        #col-cercle{
+        #col-cercle {
             border-top-left-radius: var(--BRadius-Section);
             border-top-right-radius: var(--BRadius-Section);
         }
 
-        #col-paragraphe{
+        #col-paragraphe {
             padding: var(--paddingInline-section);
             border-bottom-left-radius: var(--BRadius-Section);
             border-bottom-right-radius: var(--BRadius-Section);
             border-top-left-radius: var(--BRadius-Section);
         }
 
-        #col-img{
+        #col-img {
             background-color: var(--background-section);
             padding: var(--paddingInline-section);
             border-radius: var(--BRadius-Section);
+
         }
 
         #col-title {
@@ -118,9 +125,9 @@
         }
 
 
-        #col-img{
+        #col-img {
 
-            #img-gift{
+            #img-gift {
                 min-width: 300px;
                 min-height: 300px;
                 object-fit: contain;
@@ -146,22 +153,24 @@
     }
 
 
-// phone
-@media (max-width: 767.98px) {
-    #aboutUs{
 
-        #col-paragraphe{
-            padding: var(--paddingInline-section-mobile);
-            p{
-                font-size:var(--subtitle-mobile)
+
+    // phone
+    @media (max-width: 767.98px) {
+        #aboutUs {
+
+            #col-paragraphe {
+                padding: var(--paddingInline-section-mobile);
+
+                p {
+                    font-size: var(--subtitle-mobile)
+                }
+
             }
 
-        }
-
-        #col-img{
-            padding: var(--paddingInline-section-mobile);
+            #col-img {
+                padding: var(--paddingInline-section-mobile);
+            }
         }
     }
-}
-    
 </style>

@@ -2,10 +2,11 @@
     <section id="howItWork">
 
         <b-row class="g-0">
-            <b-col cols="6" md="4" id="col-title">
+            <b-col cols="6" md="4" lg="2" id="col-title">
+                <div id="radius-btmRight" class="position-absolute"></div>
                 <TitleSection :section="'howitworks'" />
             </b-col>
-            <b-col cols="6" md="8" id="col-subtitle">
+            <b-col cols="6" md="8" lg="10" id="col-subtitle">
                 <div class="h-100 d-flex align-items-center justify-content-end justify-content-lg-start gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="position-absolute top-50 start-50 translate-middle">
@@ -105,6 +106,23 @@
         #col-title {
             padding-bottom: 10px;
             padding-right: 10px;
+
+            #radius-btmRight{
+                background-color: var(--background-section);
+                width: 10px;
+                height: 10px;
+                right: 0;
+                bottom: 0;
+
+                &::after {
+                    content: '';
+                    background-color: var(--background-body);
+                    width: inherit;
+                    display: block;
+                    height: inherit;
+                    border-bottom-left-radius: 16px;
+                }
+            }
         }
 
         #col-subtitle {

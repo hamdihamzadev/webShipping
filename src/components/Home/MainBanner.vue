@@ -207,7 +207,7 @@
     // Medium devices (tablets, less than 992px)
     @media (max-width: 991.98px) {
         #banner {
-            padding:var(--paddingInline-section);
+            padding:  var(--paddingInline-section-mobile);
 
             #topology {
                 left: auto;

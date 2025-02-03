@@ -2,7 +2,7 @@
     <section id="contact-us">
         <b-row class="g-0 overflow-hidden">
             <b-col cols="6" md="8" lg="10">
-                <div id="subtitle" class="h-100 d-flex align-items-center justify-content-end gap-3">
+                <div id="subtitle" class="h-100 d-flex align-items-center justify-content-start gap-3">
                     <div id="container-cercle" class="position-relative">
                         <div class="starburst position-absolute top-50 start-50 translate-middle">
                         </div>
@@ -22,12 +22,14 @@
                         </svg>
                     </div>
                     <p id="para" class="m-0 d-none d-md-block ">
-                        Service for tracking your orders Our mission is to offer modern and reliable tools that make tracking 
+                        Service for tracking your orders Our mission is to offer modern and reliable tools that make
+                        tracking
                     </p>
                 </div>
             </b-col>
             <b-col cols="6" md="4" lg="2">
-                <div id="title">
+                <div id="title" class="h-100 position-relative">
+                    <div id="radius-btmLeft" class="position-absolute"></div>
                     <TitleSection :section="'contact'" />
                 </div>
             </b-col>
@@ -194,6 +196,23 @@
         #title {
             padding-bottom: 10px;
             padding-left: 10px;
+
+            #radius-btmLeft {
+                background-color: var(--background-section);
+                width: 10px;
+                height: 10px;
+                left: 0;
+                bottom: 0;
+
+                &::after {
+                    content: '';
+                    background-color: var(--background-body);
+                    width: inherit;
+                    display: block;
+                    height: inherit;
+                    border-bottom-left-radius: 16px;
+                }
+            }
         }
 
         #form-contact {
@@ -313,7 +332,7 @@
     @media (max-width: 767.98px) {
         #contact-us {
 
-            #form-contact{
+            #form-contact {
                 padding: var(--paddingInline-section-mobile);
             }
 

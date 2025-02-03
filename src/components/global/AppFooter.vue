@@ -1,26 +1,31 @@
 <template>
     <section id="AppFooter" class="mb-4">
-        <b-row class="g-3 g-lg-0" >
-            <b-col  lg="3">
-                <div class="h-100 d-flex flex-column ">
-                    <p class="mb-3 fw-medium">title</p>
-                    <router-link to=""></router-link>
+        <b-row class="g-4 g-lg-0">
+            <b-col lg="4">
+                <div class="h-100 d-flex flex-column gap-3 ">
+                    <div id="container-img">
+                        <img style="width: 40px; height: 40px;" src="@/assets/img/logo.png" alt="Logo">
+                    </div>
+                    <span id="description" >
+                        Fast and secure delivery, send, receive with confidence and ease! 📦
+                    </span>
                 </div>
             </b-col>
-            <b-col cols="6" lg="3" v-for="item in sectionLinks" :key="item.id">
+            <b-col cols="6" lg="2" v-for="item in sectionLinks" :key="item.id">
                 <div class="h-100" id="links">
                     <p id="title" class="mb-3 fw-medium">{{ item.topTitle }}</p>
                     <b-list-group>
                         <b-list-group-item v-for="link in item.links" :key="link.id"
                             class="ps-0 bg-transparent border border-0 text-white">
-                            <router-link :to="link.path" tag="a" class="text-decoration-none fw-light d-block" id="link">
+                            <router-link :to="link.path" tag="a" class="text-decoration-none fw-light d-block"
+                                id="link">
                                 {{ link.nameLink }}
                             </router-link>
                         </b-list-group-item>
                     </b-list-group>
                 </div>
             </b-col>
-            <b-col lg="3">
+            <b-col lg="4">
                 <div id="newsletter" class="h-100">
                     <p class="mb-3 fw-medium">NEWSLETTER</p>
                     <b-form id="form">
@@ -31,9 +36,6 @@
                         </div>
                         <b-button class="w-100" id="btn">Subscribe Now</b-button>
                     </b-form>
-                    <div>
-
-                    </div>
                 </div>
             </b-col>
         </b-row>
@@ -88,6 +90,11 @@
         padding: var(--paddingInline-section);
         border: 1px solid var(--border-color);
         border-radius: var(--BRadius-Section);
+
+        #description{
+            font-size: 14px;
+        }
+
         #links {
             #title {
                 color: var(--colortext-primary);
@@ -124,7 +131,7 @@
 
                         &::placeholder {
                             font-size: 14px;
-                            
+
                         }
 
                         &:focus {
@@ -155,10 +162,10 @@
     }
 
 
-            // phone
-@media (max-width: 767.98px) {
-    #AppFooter{
-        padding: var(--paddingInline-section-mobile);
+    // phone
+    @media (max-width: 767.98px) {
+        #AppFooter {
+            padding: var(--paddingInline-section-mobile);
+        }
     }
-}
 </style>

@@ -2,7 +2,7 @@
     <section id="our-services">
 
             <b-row class="g-0 overflow-hidden">
-                <b-col cols="6" md="8" id="col-subtitle">
+                <b-col cols="6" md="8" lg="10" id="col-subtitle">
                     <div class="h-100 d-flex align-items-center justify-content-lg-end justify-content-lg-start  gap-3">
                         <div id="container-cercle" class="position-relative">
                             <div class="starburst position-absolute top-50 start-50 translate-middle">
@@ -30,7 +30,7 @@
                     </div>
 
                 </b-col>
-                <b-col cols="6" md="4" id="col-title" class="position-relative">
+                <b-col cols="6" md="4" lg="2" id="col-title" class="position-relative">
                     <div id="radius-btm-left" class="position-absolute"></div>
                     <TitleSection :section="'services'" />
                 </b-col>
