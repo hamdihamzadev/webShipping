@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <b-container fluid  v-if="showLoading===false">
+ 
       <div class="d-none d-md-block mt-2" v-if="ShowHeader" >
         <TopBar />
       </div>
@@ -27,7 +27,6 @@
         <MainHeader />
       </div>
       <router-view />
-    </b-container>
   </div>
 </template>
 
@@ -51,7 +50,7 @@
 
     computed:{
       ShowHeader(){
-        return this.$route.path==="/Login" ? false : true
+        return this.$route.path==="/Login" || this.$route.path==="/signup" ? false : true
       }
     },
 
