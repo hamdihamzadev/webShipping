@@ -1,6 +1,7 @@
 <template>
     <section id="hautHeader">
-        <div class="d-flex justify-content-between align-items-center py-4">
+        <b-container>
+            <div class="d-flex justify-content-between align-items-center py-4">
             <div class="d-flex justify-content-between align-items-center gap-5">
                 <div class="d-flex align-items-center gap-2">
                     <b-icon icon="phone"></b-icon>
@@ -20,6 +21,8 @@
                 </div>
             </router-link>
         </div>
+        </b-container>
+
     </section>
 </template>
 

@@ -1,239 +1,235 @@
 <template>
-    <section id="login">
-        <b-row class="h-100 position-relative">
-            <div id="blur" class="position-absolute ">
-                <BlurBg />
-            </div>
-            <b-col class="d-none d-lg-block" lg="5">
-                <div class="h-100 p-5" id="col-img">
-                    <div class="d-flex align-items-center gap-2">
-                        <b-img style="height: 20px; width: 20px;" :src="require('@/assets/img/logo.png')"></b-img>
-                        <span class="fw-bold">GoDelivery</span>
+    <section id="login" class="position-reltaive" >
+        <div id="BlurBg" class="position-absolute" ><BlurBg/></div>
+        <b-container class="h-100" fluid>
+            <b-row class="h-100">
+                <b-col cols="12" lg="5" id="container-img-section" class="d-none d-lg-block" >
+                    <div id="img-section" class="p-5 h-100 d-flex flex-column justify-content-between">
+                        <p class="mb-0" id="name-logo"><strong>GoDelivery</strong></p>
+                        <div id="container-img" class="text-center" >
+                            <b-img style="width: 80%;" :src="require('@/assets/img/loginImg.webp')"></b-img>
+                        </div>
+                        <p id="para-img">Track all your orders with a fast system from anywhere.</p>
+
                     </div>
+                </b-col>
+                <b-col cols="12" lg="7" class="d-flex align-items-center py-5 py-lg-0">
+                    <div id="form-section">
+                        <div class="d-flex align-items-center justify-content-center gap-2 d-lg-none mb-5" id="container-logo">
+                            <b-img style="width: 20px; aspect-ratio: 1;" :src="require('@/assets/img/logo.png')"></b-img>
+                            <span><strong>GoDelivery</strong></span>
+                        </div>
+                        <p id="welcome-text" class="fw-bold mb-5 text-center">Welcome Back!</p>
+                        <b-form id="form" class="mb-4">
+                            <b-row class="g-3">
+                                <b-col cols="12">
+                                    <label class="mb-2">Email</label>
+                                    <div class="d-flex align-items-center mb-2" id="container-input">
+                                        <b-icon icon="envelope" scale="1.2" id="icon"></b-icon>
+                                        <b-form-input id="input" type="email" class="bg-transparent  "
+                                            placeholder="Enter your email address">
+                                        </b-form-input>
+                                    </div>
+                                </b-col>
+                                <b-col cols="12">
+                                    <label class="mb-2">Password</label>
+                                    <div class="d-flex align-items-center mb-2" id="container-input">
+                                        <b-icon icon="lock" scale="1.2" id="icon"></b-icon>
+                                        <b-form-input id="input" type="password" class="bg-transparent  "
+                                            placeholder="Create a password">
+                                        </b-form-input>
+                                    </div>
+                                    <p class="mb-0 mt-2 text-end" id="frg-pass" >Forget Password</p>
+                                </b-col>
 
-                    <div class="text-center mt-5" id="container-img">
-                        <b-img class="w-75" :src="require('@/assets/img/loginImg.webp')"></b-img>
+                                <b-col cols="12">
+                                    <b-button class="w-100" id="btn-form">Create account</b-button>
+                                </b-col>
+
+                            </b-row>
+
+                        </b-form>
+
+                        <p id="signup" class="text-center mb-0">Don’t have account,
+                            <router-link tag="a" to="/signup" class="text-decoration-underline fw-bold">Sign up
+                            </router-link>
+                        </p>
+
                     </div>
-
-                    <p class="mb-0  w-75" id="text">Track your all all orders by click with the fast systeme in any
-                        placements</p>
-                </div>
-            </b-col>
-            <b-col cols="12" lg="7" id="col-form" class="d-flex flex-column justify-content-evenly">
-                <div class="d-flex align-items-center justify-content-center gap-2  mb-3 d-lg-none">
-                    <b-img style="height: 20px; width: 20px;" :src="require('@/assets/img/logo.png')"></b-img>
-                    <span class="fw-bold">GoDelivery</span>
-                </div>
-                <p class="mb-0 text-center fw-bold fs-3">Welcome back !</p>
-                <b-form id="form">
-                    <b-row class="g-3">
-                        <b-col cols="12">
-                            <label for="">Email</label>
-                            <div class="d-flex align-items-center mb-2" id="email">
-                                <b-icon icon="envelope" scale="1.2" id="icon-search"></b-icon>
-                                <b-form-input class="bg-transparent  " placeholder="Enter your email">
-                                </b-form-input>
-                            </div>
-                        </b-col>
-                        <b-col cols="12">
-                            <label for="">Password</label>
-                            <div class="d-flex align-items-center mb-2" id="password">
-                                <b-icon icon="lock" scale="1.2" id="icon-search"></b-icon>
-                                <b-form-input class="bg-transparent  " placeholder="* * * * * * * *">
-                                </b-form-input>
-                            </div>
-                            <p id="ForgetPass">Forget password</p>
-                        </b-col>
-                        <b-col cols="12">
-                            <b-button class="w-100" id="btn">Log in</b-button>
-                        </b-col>
-                    </b-row>
-
-                </b-form>
-                <p id="signup" class="text-center">Don’t have account , <router-link tag="a" to="/signup"
-                        class="text-decoration-underline fw-bold">Sign up</router-link>
-                </p>
-            </b-col>
-        </b-row>
+                </b-col>
+            </b-row>
+        </b-container>
     </section>
 </template>
 
 <script>
-    import BlurBg from '@/components/global/BlurBg.vue';
+import BlurBg from '@/components/global/BlurBg.vue';
     export default {
         name: 'LoginView',
-        components: {
+        components:{
             BlurBg
         }
     }
 </script>
 
-<style lang="scss" scoped>
-    #login {
-        height: 100vh;
-        padding: 2rem;
-        border-radius: var(--BRadius-Section);
-        background-color: #232121;
 
-        #blur {
-            right: 0;
-            width: fit-content;
-            top: -48px;
-            opacity: 0.7;
+<style lang="scss" scoped>
+    #login{
+        min-height: 100vh;
+        height: 100vh;
+
+        #BlurBg{
+            right: -41px;
         }
 
-        #col-img {
-            background-color: var(--background-section);
-            border-radius: var(--BRadius-Section);
+        #form-section {
+            width: 450px;
+            margin: auto;
 
-            #text {
-                margin-top: 5rem;
-                padding-left: 24px;
-                position: relative;
+            #container-logo {
+
+                img {
+                    width: 25px;
+                    aspect-ratio: 1;
+                }
+            }
+
+            #welcome-text {
+                font-size: 24px;
+            }
+
+            #form {
+
+                label{
+                    font-size: 14px;
+                }
+
+                #container-input {
+                    border: 1px solid #A1A1AA;
+                    border-radius: 8px;
+                    padding: 8px 16px;
+                    height: 50px;
+
+                    &:focus-within {
+                        border-color: var(--couleur-primaire-3);
+                    }
+
+                    &:focus-within #icon {
+                        color: var(--colortext-primary);
+                    }
+
+                    #icon {
+                        color: #A1A1AA;
+                    }
+
+                    #input {
+                        border: none;
+                        border-radius: var(--BRadius-titleSection);
+                        color: #A1A1AA;
+                        height: 50px;
+
+                        &::placeholder {
+                            font-size: 14px;
+
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                            color: var(--colortext-primary);
+                        }
+
+                        &::placeholder {
+                            color: var(--couleur-primaire-2);
+
+                        }
+                    }
+                }
+
+                #frg-pass{
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition:text-decoration 0.3s ease ;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                #btn-form {
+                    height: 50px;
+                    background-color: var(--backgroud-btn);
+                    color: var(--colortext-primary);
+                    border: none;
+
+                    &:hover {
+                        background-color: var(--hover-btn);
+                        box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.15);
+                    }
+                }
+
+
+            }
+
+            #another-signup {
+                font-size: 14px;
 
                 &::before {
                     content: '';
-                    width: 2px;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    background-color: white;
+                    flex: 1;
+                    background-color: rgb(255, 255, 255, 0.24);
+                    height: 2px;
+                }
+
+                &::after {
+                    content: '';
+                    flex: 1;
+                    background-color: rgb(255, 255, 255, 0.24);
+                    height: 2px;
                 }
             }
-        }
 
-        #col-form {
-            padding-inline: 15rem;
+            #btn-google,
+            #btn-facebook {
+                background-color: var(--background-section);
+                padding: 12px 24px;
+                height: 48px;
+                font-size: 14px;
+                border: none;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #444444
+                }
+            }
 
             #signup {
                 font-size: 14px;
 
                 a {
-                    color: white;
-                }
-
-            }
-        }
-    }
-
-    #form {
-
-        #email {
-            border: 1px solid #A1A1AA;
-            border-radius: 8px;
-            padding: 8px 16px;
-            height: 50px;
-
-            &:focus-within {
-                border-color: var(--couleur-primaire-3);
-            }
-
-            #icon-search {
-                color: #A1A1AA;
-            }
-
-            input {
-                border: none;
-                border-radius: var(--BRadius-titleSection);
-                color: #A1A1AA;
-
-                &::placeholder {
-                    font-size: 14px;
-
-                }
-
-                &:focus {
-                    box-shadow: none;
                     color: var(--colortext-primary);
                 }
+            }
 
-                &::placeholder {
-                    color: var(--couleur-primaire-2);
-                }
+
+        }
+
+        #container-img-section {
+            padding-block: 12px;
+            #img-section {
+                background-color: var(--background-section);
+                border-radius: var(--BRadius-Section);
+
             }
         }
 
-        #password {
-            border: 1px solid #A1A1AA;
-            border-radius: 8px;
-            padding: 8px 16px;
-            height: 50px;
-
-            &:focus-within {
-                border-color: var(--couleur-primaire-3);
-            }
-
-            #icon-search {
-                color: #A1A1AA;
-            }
-
-            input {
-                border: none;
-                border-radius: var(--BRadius-titleSection);
-                color: #A1A1AA;
-
-                &::placeholder {
-                    font-size: 14px;
-
-                }
-
-                &:focus {
-                    box-shadow: none;
-                    color: var(--colortext-primary);
-                }
-
-                &::placeholder {
-                    color: var(--couleur-primaire-2);
-                }
-            }
-        }
-
-        #btn {
-            background-color: var(--backgroud-btn);
-            height: 50px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 8px;
-
-            &:hover {
-                background-color: var(--hover-btn);
-                box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.15);
-            }
-        }
-
-        label {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        #ForgetPass {
-            font-size: 12px;
-            text-align: end;
-
-            &:hover {
-                text-decoration: underline;
-                cursor: pointer;
-            }
-        }
     }
 
 
+    @media  (max-width: 992px) {
+        #form-section{
+            margin-block: 24px;
 
-    // phone
-    @media (max-width: 767.98px) {
-        #login {
-            #col-form {
-                padding: 0;
-            }
-        }
-    }
-
-    // Medium devices (tablets, less than 992px)
-    @media (max-width: 991.98px) {
-        #login {
-            #col-form {
-                padding: 8rem;
+            #welcome-text{
+                font-size: 14px;
             }
         }
     }

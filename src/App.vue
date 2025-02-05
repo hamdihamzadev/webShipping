@@ -44,7 +44,7 @@
 
     data() {
       return {
-        showLoading: false,
+        showLoading: true,
       }
     },
 

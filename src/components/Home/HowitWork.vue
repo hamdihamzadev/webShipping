@@ -1,7 +1,7 @@
 <template>
     <section id="howItWork">
-
-        <b-row class="g-0">
+        <b-container>
+            <b-row class="g-0">
             <b-col cols="6" md="4" lg="2" id="col-title">
                 <div id="radius-btmRight" class="position-absolute"></div>
                 <TitleSection :section="'howitworks'" />
@@ -59,6 +59,8 @@
                 </b-row>
             </b-col>
         </b-row>
+        </b-container>
+
 
     </section>
 </template>

@@ -1,7 +1,8 @@
 <template>
     <section id="header">
 
-        <div class=" d-none d-lg-flex justify-content-between align-items-center" id="content">
+        <b-container>
+            <div class=" d-none d-lg-flex justify-content-between align-items-center" id="content">
             <h5 class="m-0"><strong>SHIPiN</strong></h5>
             <ul class="d-flex justify-content-between align-items-center gap-3 m-0" id="list">
                 <li v-for="(item,index) in links" :key="item.id">
@@ -54,6 +55,7 @@
 
             </b-sidebar>
         </div>
+        </b-container>
 
     </section>
 </template>

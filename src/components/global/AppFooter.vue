@@ -1,44 +1,47 @@
 <template>
     <section id="AppFooter" class="mb-4">
-        <b-row class="g-4 g-lg-0">
-            <b-col lg="4">
-                <div class="h-100 d-flex flex-column gap-3 ">
-                    <div id="container-img">
-                        <img style="width: 40px; height: 40px;" src="@/assets/img/logo.png" alt="Logo">
-                    </div>
-                    <span id="description" >
-                        Fast and secure delivery, send, receive with confidence and ease! 📦
-                    </span>
-                </div>
-            </b-col>
-            <b-col cols="6" lg="2" v-for="item in sectionLinks" :key="item.id">
-                <div class="h-100" id="links">
-                    <p id="title" class="mb-3 fw-medium">{{ item.topTitle }}</p>
-                    <b-list-group>
-                        <b-list-group-item v-for="link in item.links" :key="link.id"
-                            class="ps-0 bg-transparent border border-0 text-white">
-                            <router-link :to="link.path" tag="a" class="text-decoration-none fw-light d-block"
-                                id="link">
-                                {{ link.nameLink }}
-                            </router-link>
-                        </b-list-group-item>
-                    </b-list-group>
-                </div>
-            </b-col>
-            <b-col lg="4">
-                <div id="newsletter" class="h-100">
-                    <p class="mb-3 fw-medium">NEWSLETTER</p>
-                    <b-form id="form">
-                        <div class="d-flex align-items-center mb-2" id="search">
-                            <b-icon icon="envelope" scale="1" id="icon-search"></b-icon>
-                            <b-form-input class="bg-transparent  " placeholder="Search status" v-model="inputSearch">
-                            </b-form-input>
+        <b-container>
+            <b-row id="border-footer" class="g-0 gap-4 gap-lg-0 ">
+                <b-col lg="4">
+                    <div class="h-100 d-flex flex-column gap-3 ">
+                        <div id="container-img">
+                            <img style="width: 40px; height: 40px;" src="@/assets/img/logo.png" alt="Logo">
                         </div>
-                        <b-button class="w-100" id="btn">Subscribe Now</b-button>
-                    </b-form>
-                </div>
-            </b-col>
-        </b-row>
+                        <span id="description">
+                            Fast and secure delivery, send, receive with confidence and ease! 📦
+                        </span>
+                    </div>
+                </b-col>
+                <b-col cols="6" lg="2" v-for="item in sectionLinks" :key="item.id">
+                    <div class="h-100" id="links">
+                        <p id="title" class="mb-3 fw-medium">{{ item.topTitle }}</p>
+                        <b-list-group>
+                            <b-list-group-item v-for="link in item.links" :key="link.id"
+                                class="ps-0 bg-transparent border border-0 text-white">
+                                <router-link :to="link.path" tag="a" class="text-decoration-none fw-light d-block"
+                                    id="link">
+                                    {{ link.nameLink }}
+                                </router-link>
+                            </b-list-group-item>
+                        </b-list-group>
+                    </div>
+                </b-col>
+                <b-col lg="4">
+                    <div id="newsletter" class="h-100">
+                        <p class="mb-3 fw-medium">NEWSLETTER</p>
+                        <b-form id="form">
+                            <div class="d-flex align-items-center mb-2" id="search">
+                                <b-icon icon="envelope" scale="1" id="icon-search"></b-icon>
+                                <b-form-input class="bg-transparent  " placeholder="Search status"
+                                    v-model="inputSearch">
+                                </b-form-input>
+                            </div>
+                            <b-button class="w-100" id="btn">Subscribe Now</b-button>
+                        </b-form>
+                    </div>
+                </b-col>
+            </b-row>
+        </b-container>
     </section>
 </template>
 
@@ -86,12 +89,12 @@
 </script>
 
 <style lang="scss" scoped>
-    #AppFooter {
+    #border-footer {
         padding: var(--paddingInline-section);
         border: 1px solid var(--border-color);
         border-radius: var(--BRadius-Section);
 
-        #description{
+        #description {
             font-size: 14px;
         }
 
@@ -164,8 +167,9 @@
 
     // phone
     @media (max-width: 767.98px) {
-        #AppFooter {
+        #border-footer {
             padding: var(--paddingInline-section-mobile);
+            border: 1px solid var(--border-color);
         }
     }
 </style>

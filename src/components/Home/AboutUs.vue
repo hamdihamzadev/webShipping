@@ -1,6 +1,7 @@
 <template>
     <section id="aboutUs">
-        <b-row class="g-0 gap-3 flex-lg-nowrap">
+        <b-container>
+            <b-row class="g-0 gap-3 flex-lg-nowrap">
             <b-col cols="12" lg="6">
                 <b-row class="g-0 h-100">
                     <b-col cols="6" md="4" id="col-title" class="position-relative">
@@ -40,6 +41,7 @@
                 </b-img>
             </b-col>
         </b-row>
+        </b-container>
     </section>
 
 </template>

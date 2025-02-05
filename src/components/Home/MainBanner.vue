@@ -1,35 +1,38 @@
 <template>
-    <section id="banner" class="position-relative">
-        <b-row class="flex-column-reverse flex-lg-row gap-5 gap-lg-0">
-            <b-col cols="12" lg="6" class="d-flex justify-content-center">
-                <div class="d-flex flex-column justify-content-lg-center h-lg-100">
-                    <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')"
-                        alt="">
+    <section id="banner" >
+        <b-container>
+            <b-row id="banner-content" class="flex-column-reverse flex-lg-row gap-5 gap-lg-0 g-0 position-relative">
+                <b-col cols="12" lg="6" class="d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-lg-center h-lg-100">
+                        <img id="topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-2.png')"
+                            alt="">
 
-                    <div class="position-absolute z-1">
-                        <BlurBg />
+                        <div class="position-absolute z-1">
+                            <BlurBg />
+                        </div>
+
+                        <h2 id="headline" class="fw-bold z-3">
+                            <span>Simplify tracking your</span>
+                            <br> <span>orders in on click</span>
+                        </h2>
+
+                        <p class="mb-5 w-75" id="subtitle">
+                            Our platform allows you to track your packages
+                            in real time, wherever you are
+                        </p>
+                        <router-link to="/trackorder" class="z-3">
+                            <b-button id="cta" class="border-none">Track order</b-button>
+                        </router-link>
                     </div>
+                </b-col>
+                <b-col cols="12" lg="6">
+                    <div>
+                        <img class="w-100 h-100 object-fit-contain" :src="require('@/assets/img/imgBanner.png')" alt="">
+                    </div>
+                </b-col>
+            </b-row>
+        </b-container>
 
-                    <h2 id="headline" class="fw-bold z-3">
-                        <span>Simplify tracking your</span>
-                        <br> <span>orders in on click</span>
-                    </h2>
-
-                    <p class="mb-5" id="subtitle">
-                        Our platform allows you to track your packages
-                        in real time, wherever you are
-                    </p>
-                    <router-link to="/trackorder" class="z-3">
-                        <b-button id="cta" class="border-none">Track order</b-button>
-                    </router-link>
-                </div>
-            </b-col>
-            <b-col cols="12" lg="6">
-                <div>
-                    <img class="w-100 h-100 object-fit-contain" :src="require('@/assets/img/imgBanner.png')" alt="">
-                </div>
-            </b-col>
-        </b-row>
 
 
 
@@ -67,7 +70,7 @@
 </script>
 
 <style lang="scss" scoped>
-    #banner {
+    #banner-content {
 
         background-color: var(--background-section);
         padding: 107px var(--paddingInline-section);
@@ -119,7 +122,7 @@
             top: -65px;
             left: 266px;
             width: 300px;
-            opacity: 0.8;
+            opacity: 0.5;
         }
 
 
@@ -176,8 +179,8 @@
 
     // phone
     @media (max-width: 767.98px) {
-        #banner {
-            padding: 48px var(--paddingInline-section-mobile);
+        #banner-content {
+           
 
             #headline {
                 font-size: var(--title-banner-mobile);
@@ -206,16 +209,17 @@
 
     // Medium devices (tablets, less than 992px)
     @media (max-width: 991.98px) {
-        #banner {
-            padding:  var(--paddingInline-section-mobile);
+        #banner-content {
+            padding-inline: var(--paddingInline-section-mobile);
+            padding-block: 44px;
 
             #topology {
                 left: auto;
-        width: 148px;
-        opacity: 0.8;
-        bottom: -27px;
-        top: auto;
-        right: -13px;
+                width: 148px;
+                opacity: 0.8;
+                bottom: -27px;
+                top: auto;
+                right: -13px;
             }
 
         }

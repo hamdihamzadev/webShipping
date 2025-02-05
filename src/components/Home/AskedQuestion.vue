@@ -1,6 +1,7 @@
 <template>
     <section id="faq" class="">
-        <b-row class="g-0">
+<b-container>
+    <b-row class="g-0">
             <b-col cols="2" lg="4">
                 <div class="h-100" id="col-left">
                 </div>
@@ -39,6 +40,7 @@
                 </div>
             </b-col>
         </b-row>
+</b-container>
     </section>
 </template>
 

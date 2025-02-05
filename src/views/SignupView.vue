@@ -1,18 +1,26 @@
 <template>
-    <section id="signup">
-        <b-container>
-            <b-row>
-                <b-col cols="5">
-                    <div id="img-section"></div>
+    <section id="signup" class="position-relative">
+        <div id="BlurBg" class="position-absolute" ><BlurBg/></div>
+        <b-container class="h-100" fluid>
+            <b-row class="h-100">
+                <b-col cols="12" lg="5" id="container-img-section" class="d-none d-lg-block" >
+                    <div id="img-section" class="p-5 h-100 d-flex flex-column justify-content-between">
+                        <p class="mb-0" id="name-logo"><strong>GoDelivery</strong></p>
+                        <div id="container-img" class="text-center" >
+                            <b-img class="w-75" :src="require('@/assets/img/imgsignup.png')"></b-img>
+                        </div>
+                        <p id="para-img">Track all your orders with a fast system from anywhere.</p>
+
+                    </div>
                 </b-col>
-                <b-col cols="7">
+                <b-col cols="12" lg="7" class="d-flex align-items-center py-5 py-lg-0">
                     <div id="form-section">
-                        <div class="d-flex align-items-center" id="container-logo">
-                            <b-img :src="require('@/assets/img/logo.png')"></b-img>
+                        <div class="d-flex align-items-center justify-content-center d-lg-none mb-5" id="container-logo">
+                            <b-img style="width: 20px; aspect-ratio: 1;" :src="require('@/assets/img/logo.png')"></b-img>
                             <span><strong>GoDelivery</strong></span>
                         </div>
-                        <p id="welcome-text" class="fw-bold">Start creating your account for free.</p>
-                        <b-form id="form">
+                        <p id="welcome-text" class="fw-bold mb-5">Start creating your account for free.</p>
+                        <b-form id="form" class="mb-4">
                             <b-row class="g-3">
                                 <b-col cols="12" lg="6">
                                     <label class="mb-2">Full Name</label>
@@ -59,12 +67,27 @@
 
                         </b-form>
 
-                        <p class="d-flex align-items-center gap-2" id="another-signup">Sign up With</p>
-                        <div class="d-flex align-items-center gap-2" >
-                            <b-button></b-button>
-                            <b-button></b-button>
+                        <p class="d-flex align-items-center gap-2 mb-4" id="another-signup">Sign up With</p>
+                        <div class="d-flex align-items-center gap-2 mb-5">
+                            <b-button id="btn-google"
+                                class="d-flex align-items-center justify-content-center gap-2 w-100">
+                                <img width="25" height="25" src="https://img.icons8.com/color/48/google-logo.png"
+                                    alt="google-logo" />
+                                <span>Google</span>
+                            </b-button>
+                            <b-button id="btn-facebook"
+                                class="d-flex align-items-center justify-content-center gap-2 w-100">
+                                <img width="25" height="25" src="https://img.icons8.com/color/48/facebook-new.png"
+                                    alt="facebook-new" />
+                                <span>Facebook</span>
+                            </b-button>
                         </div>
-                     
+
+                        <p id="login" class="text-center mb-0">Don’t have account,
+                            <router-link tag="a" to="/login" class="text-decoration-underline fw-bold">Login
+                            </router-link>
+                        </p>
+
                     </div>
                 </b-col>
             </b-row>
@@ -73,15 +96,30 @@
 </template>
 
 <script>
+import BlurBg from '@/components/global/BlurBg.vue';
+
     export default {
-        name: 'SignupView'
+        name: 'SignupView',
+        components:{
+            BlurBg
+        }
     }
 </script>
 
 
 <style lang="scss" scoped>
     #signup {
+        min-height: 100vh;
+        height: 100vh;
+
+        #BlurBg{
+            right: -41px;
+        }
+
         #form-section {
+            width: 450px;
+            margin: auto;
+
             #container-logo {
 
                 img {
@@ -93,6 +131,7 @@
             #welcome-text {
                 padding-left: 10px;
                 position: relative;
+                font-size: 20px;
 
                 &::before {
                     content: '';
@@ -106,6 +145,10 @@
             }
 
             #form {
+
+                label{
+                    font-size: 14px;
+                }
 
                 #container-input {
                     border: 1px solid #A1A1AA;
@@ -129,7 +172,7 @@
                         border: none;
                         border-radius: var(--BRadius-titleSection);
                         color: #A1A1AA;
-                        height: 54px;
+                        height: 50px;
 
                         &::placeholder {
                             font-size: 14px;
@@ -149,7 +192,7 @@
                 }
 
                 #btn-form {
-                    height: 54px;
+                    height: 50px;
                     background-color: var(--backgroud-btn);
                     color: var(--colortext-primary);
                     border: none;
@@ -163,24 +206,68 @@
 
             }
 
-            #another-signup{
-                    font-size: 14px;
+            #another-signup {
+                font-size: 14px;
 
-                    &::before{
-                        content: '';
-                        flex: 1;
-                        background-color: rgb(255, 255, 255 , 0.24);
-                        height: 2px;
-                    }
-                    &::after{
-                        content: '';
-                        flex: 1;
-                        background-color: rgb(255, 255, 255 , 0.24);
-                        height: 2px;
-                    }
+                &::before {
+                    content: '';
+                    flex: 1;
+                    background-color: rgb(255, 255, 255, 0.24);
+                    height: 2px;
                 }
 
+                &::after {
+                    content: '';
+                    flex: 1;
+                    background-color: rgb(255, 255, 255, 0.24);
+                    height: 2px;
+                }
+            }
 
+            #btn-google,
+            #btn-facebook {
+                background-color: var(--background-section);
+                padding: 12px 24px;
+                height: 48px;
+                font-size: 14px;
+                border: none;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #444444
+                }
+            }
+
+            #login {
+                font-size: 14px;
+
+                a {
+                    color: var(--colortext-primary);
+                }
+            }
+
+
+        }
+
+        #container-img-section {
+            padding-block: 12px;
+            #img-section {
+                background-color: var(--background-section);
+                border-radius: var(--BRadius-Section);
+
+            }
+        }
+
+    }
+
+
+    @media  (max-width: 992px) {
+        #form-section{
+            margin-block: 24px;
+
+            #welcome-text{
+                font-size: 14px;
+            }
         }
     }
 </style>
