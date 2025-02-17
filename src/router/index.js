@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import SignupView from '@/views/SignupView.vue'
+import TrackOrder from '@/views/TrackOrder.vue'
 
 
 
@@ -17,13 +18,18 @@ const routes = [
   },
   {
     path:'/login',
-    name:"Login",
+    name:"login",
     component:LoginView
   },
   {
     path:'/signup',
     name:"signup",
     component:SignupView
+  },
+  {
+    path:'/track',
+    name:"track",
+    component:TrackOrder
   }
 ]
 

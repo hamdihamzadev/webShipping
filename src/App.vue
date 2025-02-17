@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="position-relative">
     <!-- <span class="loader"></span> -->
-    <div id="loader" class="d-flex align-items-center justify-content-center h-100 " v-if="showLoading===true">
+    <div id="loader" class="d-flex align-items-center justify-content-center h-100 " :class="{'hide-loading':showLoading===false}">
       <div>
         <div class="d-flex align-items-center justify-content-center gap-2">
         <div id="container-img">
@@ -50,7 +50,7 @@
 
     computed:{
       ShowHeader(){
-        return this.$route.path==="/Login" || this.$route.path==="/signup" ? false : true
+        return this.$route.path==="/login" || this.$route.path==="/signup" ? false : true
       }
     },
 
@@ -59,8 +59,6 @@
         this.showLoading=false
       },3400)
     }
-
-
 
   }
 </script>
@@ -76,6 +74,13 @@
 
     #loader {
       background-color: black;
+      position: absolute;
+      top: 0;
+      bottom: 0%;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      transition: transform 0.8s ease;
       #container-img {
         animation-name: animImg;
         animation-duration: 0.5s;
@@ -136,6 +141,10 @@
         }
       }
 
+    }
+
+    .hide-loading{
+      transform: translateY(-100%);
     }
 
     // .loader {
