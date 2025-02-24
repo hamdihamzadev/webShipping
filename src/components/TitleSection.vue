@@ -12,8 +12,7 @@
             <span>Services</span>
         </h2>
     </div>
-    <div v-else-if="section==='howitworks'" class="d-flex align-items-center justify-content-center   h-100 "
-        id="How-ItWorks">
+    <div v-else-if="section==='howitworks'" class="d-flex align-items-center justify-content-center h-100 " id="How-ItWorks">
         <h2 id="title" class="m-0">
             <span>How</span>
             <span>It Works</span>

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="position-relative">
     <!-- <span class="loader"></span> -->
-    <div id="loader" class="d-flex align-items-center justify-content-center h-100 " :class="{'hide-loading':showLoading===false}">
+    <!-- <div id="loader" class="d-flex align-items-center justify-content-center h-100 " :class="{'hide-loading':showLoading===false}">
       <div>
         <div class="d-flex align-items-center justify-content-center gap-2">
         <div id="container-img">
@@ -17,15 +17,11 @@
       </div>
       <span  id="slogan" >Send, receive, smile!</span>
       </div>
-    </div>
+    </div> -->
 
- 
-      <div class="d-none d-md-block mt-2" v-if="ShowHeader" >
         <TopBar />
-      </div>
-      <div class="mb-lg-5 mb-3" v-if="ShowHeader" >
         <MainHeader />
-      </div>
+     
       <router-view />
   </div>
 </template>
@@ -48,11 +44,6 @@
       }
     },
 
-    computed:{
-      ShowHeader(){
-        return this.$route.path==="/login" || this.$route.path==="/signup" ? false : true
-      }
-    },
 
     mounted(){
       setTimeout(()=>{

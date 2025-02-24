@@ -5,7 +5,8 @@
             <b-row class="h-100">
                 <b-col cols="12" lg="5" id="container-img-section" class="d-none d-lg-block" >
                     <div id="img-section" class="p-5 h-100 d-flex flex-column justify-content-between">
-                        <p class="mb-0" id="name-logo"><strong>GoDelivery</strong></p>
+                        <router-link tag="a" to="/" id="name-logo" ><strong  >GoDelivery</strong></router-link>
+                        <!-- <p class="mb-0" id="name-logo"><strong>GoDelivery</strong></p> -->
                         <div id="container-img" class="text-center" >
                             <b-img style="width: 80%;" :src="require('@/assets/img/loginImg.webp')"></b-img>
                         </div>
