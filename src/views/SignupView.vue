@@ -5,7 +5,7 @@
             <b-row class="h-100">
                 <b-col cols="12" lg="5" id="container-img-section" class="d-none d-lg-block" >
                     <div id="img-section" class="p-5 h-100 d-flex flex-column justify-content-between">
-                        <p class="mb-0" id="name-logo"><strong>GoDelivery</strong></p>
+                        <router-link id="name-brand" class="text-decoration-none" tag="a" to="/" ><strong>GoDelivery</strong></router-link>
                         <div id="container-img" class="text-center" >
                             <b-img class="w-75" :src="require('@/assets/img/imgsignup.png')"></b-img>
                         </div>
@@ -15,7 +15,7 @@
                 </b-col>
                 <b-col cols="12" lg="7" class="d-flex align-items-center py-5 py-lg-0">
                     <div id="form-section">
-                        <div class="d-flex align-items-center justify-content-center d-lg-none mb-5" id="container-logo">
+                        <div class="d-flex align-items-center justify-content-center gap-2 d-lg-none mb-5" id="container-logo">
                             <b-img style="width: 20px; aspect-ratio: 1;" :src="require('@/assets/img/logo.png')"></b-img>
                             <span><strong>GoDelivery</strong></span>
                         </div>
@@ -254,6 +254,10 @@ import BlurBg from '@/components/global/BlurBg.vue';
             #img-section {
                 background-color: var(--background-section);
                 border-radius: var(--BRadius-Section);
+
+                #name-brand{
+                    color:var(--colortext-primary)
+                }
 
             }
         }

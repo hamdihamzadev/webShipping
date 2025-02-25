@@ -1,5 +1,5 @@
 <template>
-    <section id="hautHeader">
+    <section id="hautHeader"  v-if="showTopBar" >
         <b-container>
             <div class="d-flex justify-content-between align-items-center py-4">
             <div class="d-flex justify-content-between align-items-center gap-5">
@@ -28,7 +28,22 @@
 
 <script>
     export default {
-        name: 'TopBar'
+        name: 'TopBar',
+        data(){
+            return{
+                showTopBar: true
+            }
+        },
+        watch: {
+            '$route.path'(newPath) {
+                newPath === '/login' || newPath === '/Login' || newPath==='/signup'  ? this.showTopBar = false : this.showTopBar = true;
+                
+            }
+        },
+
+        mounted(){
+            this.$route.path === '/login' || this.$route.path  === '/Login' || this.$route.path==='/signup' ? this.showTopBar = false : this.showTopBar = true;
+        }
     }
 </script>
 

@@ -2,7 +2,7 @@
     <section id="scroll-infinit">
         <b-container>
             <div class="scroll-container mt-4">
-                <div class="scroll-content d-flex  align-items-center gap-5 p-3 ">
+                <div class="scroll-content d-flex  align-items-center gap-5">
                     <div v-for="item in scrollInfini" :key="item.id" class="d-flex align-items-center gap-2 w-100">
                         <b-img :src="require('@/assets/img/delivered.png')"></b-img>
                         <p class="mb-0 w-100">{{ item }}</p>

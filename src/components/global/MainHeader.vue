@@ -1,5 +1,5 @@
 <template>
-    <section id="header" class="mb-4">
+    <section id="header" class="mb-4" v-if="showHeader">
 
         <b-container>
             <div class=" d-none d-lg-flex justify-content-between align-items-center" id="content">
@@ -14,6 +14,7 @@
                 <router-link to="/trackorder">
                     <b-button id="cta" class="border-none">Track order</b-button>
                 </router-link>
+
             </div>
 
             <!-- Phone  -->
@@ -21,7 +22,8 @@
                 <box-icon color="white" name='menu-alt-left' v-b-toggle.sidebar-menu></box-icon>
                 <img style="width: 30px; height: 30px;" src="@/assets/img/logo.png" alt="Logo" class="sidebar-logo">
                 <box-icon color="white" name='user'></box-icon>
-            </div> <!-- sidebar -->
+            </div>
+            <!-- sidebar phone -->
             <b-sidebar id="sidebar-menu" shadow>
 
                 <template #header>
@@ -56,6 +58,8 @@
                     </div>
                 </div>
 
+                <b-button id="btn-track-mobile" >Track Order</b-button>
+
             </b-sidebar>
         </b-container>
 
@@ -73,7 +77,8 @@
                     'About Us',
                     'Contact'
                 ],
-                activeLink: 0
+                activeLink: 0,
+                showHeader: true
             }
         },
 
@@ -81,6 +86,19 @@
             linkActive(index) {
                 this.activeLink = index
             }
+        },
+
+        watch: {
+            '$route.path'(newPath) {
+                newPath === '/login' || newPath === '/Login' || newPath === '/signup' ? this.showHeader = false : this
+                    .showHeader = true;
+
+            }
+        },
+
+        mounted() {
+            this.$route.path === '/login' || this.$route.path === '/Login' || this.$route.path === '/signup' ? this
+                .showHeader = false : this.showHeader = true;
         }
     }
 </script>
@@ -163,7 +181,9 @@
                 padding-inline: 24px;
                 border-radius: var(--BRadius-Section);
 
-                ::v-deep(#sidebar-menu) {
+            }
+
+            ::v-deep(#sidebar-menu) {
                     background-color: var(--background-section) !important;
                 }
 
@@ -171,44 +191,50 @@
                     width: 100% !important;
                 }
 
-
-            }
-
             #sidebar-menu {
 
-#links {
 
-    li {
-        padding-block: 12px;
+                #links {
 
-        a {
-            color: var(--colortext-primary);
-        }
+                    li {
+                        padding-block: 12px;
 
-        #arrow-icon {
-            rotate: 318deg;
-        }
+                        a {
+                            color: var(--colortext-primary);
+                        }
 
-    }
+                        #arrow-icon {
+                            rotate: 318deg;
+                        }
 
-    & {
-        border-bottom: 1px solid #545454;
-    }
+                    }
 
-}
+                    & {
+                        border-bottom: 1px solid #545454;
+                    }
 
-#login {
-    padding-block: 16px;
-    color: var(--colortext-primary);
-    border-bottom: 1px solid #545454;
-}
+                }
 
-#contact {
-    padding-block: 16px;
-    color: var(--colortext-primary);
-    border-bottom: 1px solid #545454;
-}
-}
+                #login {
+                    padding-block: 16px;
+                    color: var(--colortext-primary);
+                    border-bottom: 1px solid #545454;
+                }
+
+                #contact {
+                    padding-block: 16px;
+                    color: var(--colortext-primary);
+                    border-bottom: 1px solid #545454;
+                }
+
+                #btn-track-mobile{
+                    background-color: var(--backgroud-btn);
+                    border: none;
+                    height: 48px;
+                    width: -webkit-fill-available;
+                    margin: 16px;
+                }
+            }
         }
     }
 
@@ -223,7 +249,9 @@
                 backdrop-filter: blur(12px);
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
-                ::v-deep(#sidebar-menu) {
+            }
+
+            ::v-deep(#sidebar-menu) {
                     background-color: var(--background-section) !important;
                 }
 
@@ -231,43 +259,41 @@
                     width: 100% !important;
                 }
 
-            }
-
             #sidebar-menu {
 
-#links {
+                #links {
 
-    li {
-        padding-block: 12px;
+                    li {
+                        padding-block: 12px;
 
-        a {
-            color: var(--colortext-primary);
-        }
+                        a {
+                            color: var(--colortext-primary);
+                        }
 
-        #arrow-icon {
-            rotate: 318deg;
-        }
+                        #arrow-icon {
+                            rotate: 318deg;
+                        }
 
-    }
+                    }
 
-    & {
-        border-bottom: 1px solid #545454;
-    }
+                    & {
+                        border-bottom: 1px solid #545454;
+                    }
 
-}
+                }
 
-#login {
-    padding-block: 16px;
-    color: var(--colortext-primary);
-    border-bottom: 1px solid #545454;
-}
+                #login {
+                    padding-block: 16px;
+                    color: var(--colortext-primary);
+                    border-bottom: 1px solid #545454;
+                }
 
-#contact {
-    padding-block: 16px;
-    color: var(--colortext-primary);
-    border-bottom: 1px solid #545454;
-}
-}
+                #contact {
+                    padding-block: 16px;
+                    color: var(--colortext-primary);
+                    border-bottom: 1px solid #545454;
+                }
+            }
         }
     }
 </style>

@@ -157,7 +157,7 @@
                 }
 
             #group-question {
-                padding-inline: var(--paddingInline-section);
+                padding: var(--paddingInline-section);
 
                 #question-item {
                     border: 1px solid var(--border-color);

@@ -94,8 +94,8 @@
                                         <b-icon :icon="item.icon"></b-icon>
                                     </div>
                                     <div>
-                                        <p id="name" class="m-0 fw-bold">{{ item.name }}</p>
-                                        <p id="text" class="m-0 ">{{ item.text }}</p>
+                                        <p id="name" class="m-0">{{ item.name }}</p>
+                                        <p id="text" class="m-0 fw-medium ">{{ item.text }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -312,6 +312,10 @@
                 #item-contact {
                     padding-block: 20px;
                     border-bottom: 0.1px solid #ffffff14;
+
+                    #name{
+                        color: #bbb6ba;
+                    }
                 }
 
                 #container-icon {

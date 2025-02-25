@@ -1,6 +1,6 @@
 <template>
     <section id="home">
-        <b-row class="g-5">
+        <b-row class="g-4">
             <b-col cols="12">
                 <MainBanner />
             </b-col>

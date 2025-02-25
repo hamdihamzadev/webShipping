@@ -250,6 +250,7 @@
                 #paragraphe {
                     font-size: 14px;
                     transition: color 0.3s ease;
+                    color: #bbb6ba;
                 }
             }
 
