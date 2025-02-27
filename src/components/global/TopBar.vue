@@ -1,5 +1,5 @@
 <template>
-    <section id="hautHeader"  v-if="showTopBar" >
+    <section id="hautHeader" class="d-none d-md-block"   v-if="showTopBar" >
         <b-container>
             <div class="d-flex justify-content-between align-items-center py-4">
             <div class="d-flex justify-content-between align-items-center gap-5">
