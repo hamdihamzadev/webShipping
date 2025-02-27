@@ -97,8 +97,8 @@
         },
 
         mounted() {
-            this.$route.path === '/login' || this.$route.path === '/Login' || this.$route.path === '/signup' ? this
-                .showHeader = false : this.showHeader = true;
+            this.$route.path === '/login' || this.$route.path === '/Login' || this.$route.path === '/signup' ? 
+            this.showHeader = false : this.showHeader = true;
         }
     }
 </script>

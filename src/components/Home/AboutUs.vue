@@ -2,45 +2,45 @@
     <section id="aboutUs">
         <b-container>
             <b-row class="g-0 gap-3 flex-lg-nowrap">
-            <b-col cols="12" lg="6">
-                <b-row class="g-0 h-100">
-                    <b-col cols="6" md="4" id="col-title" class="position-relative">
-                        <div class="h-100">
-                            <TitleSection :section="'about'" />
-                        </div>
-                        <div id="radius-btm-right" class="position-absolute"></div>
-                    </b-col>
-                    <b-col cols="6" md="8" id="col-cercle"></b-col>
-                    <b-col cols="12" id="col-paragraphe">
-                        <p class="m-0">
-                            service for
-                            tracking your orders. Our mission is to offer modern and reliable tools that make
-                            tracking
-                            your packages transparent and accessible, wherever you are. With a passionate team
-                            and
-                            innovative technology .
-                            Welcome to our platform! We are dedicated to providing a simple and efficient
-                            service for
-                            tracking your orders. Our mission is to offer modern and reliable tools that make
-                            tracking
-                            your packages transparent and accessible, wherever you are. With a passionate team
-                            and
-                            innovative technology .
-                        </p>
-                    </b-col>
-                </b-row>
-            </b-col>
-            <b-col cols="12" lg="6" id="col-img"
-                class="overflow-hidden position-relative d-flex align-items-center justify-content-end flex-fill">
-                <img id="img-topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-1.png')"
-                    alt="">
-                <div class="position-absolute z-1" id="blur">
-                    <BlurBg />
-                </div>
-                <b-img id="img-gift" :src="require('@/assets/img/aboutUs.webp')" alt="Responsive image">
-                </b-img>
-            </b-col>
-        </b-row>
+                <b-col cols="12" lg="6">
+                    <b-row class="g-0 h-100">
+                        <b-col cols="6" md="4" id="col-title" class="position-relative">
+                            <div class="h-100">
+                                <TitleSection :section="'about'" />
+                            </div>
+                            <div id="radius-btm-right" class="position-absolute"></div>
+                        </b-col>
+                        <b-col cols="6" md="8" id="col-cercle"></b-col>
+                        <b-col cols="12" id="col-paragraphe">
+                            <p class="m-0">
+                                service for
+                                tracking your orders. Our mission is to offer modern and reliable tools that make
+                                tracking
+                                your packages transparent and accessible, wherever you are. With a passionate team
+                                and
+                                innovative technology .
+                                Welcome to our platform! We are dedicated to providing a simple and efficient
+                                service for
+                                tracking your orders. Our mission is to offer modern and reliable tools that make
+                                tracking
+                                your packages transparent and accessible, wherever you are. With a passionate team
+                                and
+                                innovative technology .
+                            </p>
+                        </b-col>
+                    </b-row>
+                </b-col>
+                <b-col cols="12" lg="6" id="col-img"
+                    class="overflow-hidden position-relative d-flex align-items-center justify-content-end flex-fill">
+                    <img id="img-topology" class="position-absolute z-1" :src="require('@/assets/img/Topology-1.png')"
+                        alt="">
+                    <div class="position-absolute z-1" id="blur">
+                        <BlurBg />
+                    </div>
+                    <b-img id="img-gift" :src="require('@/assets/img/aboutUs.webp')" alt="Responsive image">
+                    </b-img>
+                </b-col>
+            </b-row>
         </b-container>
     </section>
 
@@ -56,6 +56,7 @@
             TitleSection,
             BlurBg
         },
+
     }
 </script>
 
