@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="position-relative">
-    <!-- <span class="loader"></span> -->
-    <!-- <div id="loader" class="d-flex align-items-center justify-content-center h-100 " :class="{'hide-loading':showLoading===false}">
+    <span class="loader"></span>
+    <div id="loader" class="d-flex align-items-center justify-content-center h-100 " :class="{'hide-loading':showLoading===false}">
       <div>
         <div class="d-flex align-items-center justify-content-center gap-2">
         <div id="container-img">
@@ -17,7 +17,7 @@
       </div>
       <span  id="slogan" >Send, receive, smile!</span>
       </div>
-    </div> -->
+    </div>
 
         <TopBar />
         <MainHeader />
